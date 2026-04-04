@@ -9,4 +9,6 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 
 - [Issue 1: Introduction and Streaming Schedule](pseudo-blog-issue-1.md) - April 4, 2026
 
-Stay tuned for more posts!
+---
+
+[Code of Conduct](CODE_OF_CONDUCT.md)
