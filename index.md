@@ -5,6 +5,9 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 ## Connect
 - [Find Me Online](connect.md) - Discord, LinkedIn, and more
 
+## Lab & Projects
+- [Homelab Hardware](homelab-hardware.md) - Current setup and equipment
+
 ## Latest Posts
 
 - [Issue 1: Introduction and Streaming Schedule](pseudo-blog-issue-1.md) - April 4, 2026
