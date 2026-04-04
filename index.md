@@ -11,4 +11,4 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 
 ---
 
-[Code of Conduct](CODE_OF_CONDUCT.md)
+[Code of Conduct](CODE_OF_CONDUCT.md) | [Contributing](CONTRIBUTING.md)
