@@ -1,6 +1,9 @@
 # Pseudo Blog
 
-Welcome to my Pseudo Blog! This is a temporary setup until I develop a full platform. Here, I'll document my IT journey, share tips, and build a community.
+Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the platform. Here, I'll document my IT journey, share tips, and build a community.
+
+## Connect
+- [Find Me Online](connect.md) - Discord, LinkedIn, and more
 
 ## Latest Posts
 
