@@ -4,7 +4,7 @@ This page documents the software and tools I use in my homelab for virtualizatio
 
 ## Virtualization & OS
 - **Proxmox** - Hypervisor and VM management platform
-- **Alpine Linux** - Lightweight Linux distribution
+- **Linux Mint** - Lightweight Linux distribution
 
 ## Containerization & Orchestration
 - **Docker** - Container runtime
