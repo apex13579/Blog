@@ -28,3 +28,11 @@ My setup focuses on lightweight, containerized applications running on Proxmox V
 - [ ] Documentation of key configurations
 
 Check back for detailed guides on setting up and configuring these tools!
+
+## Comments
+
+Discuss this page on GitHub:
+
+- [Open the discussion page](https://github.com/apex13579/Blog/discussions)
+
+If Discussions isn’t enabled yet, use GitHub Issues and title your issue `Comments: Software Stack`.
