@@ -28,4 +28,3 @@ My setup focuses on lightweight, containerized applications running on Proxmox V
 - [ ] Documentation of key configurations
 
 Check back for detailed guides on setting up and configuring these tools!
-<<<<<<< HEAD
