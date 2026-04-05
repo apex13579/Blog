@@ -33,10 +33,3 @@ My aim is to post at least once a week, though life might occasionally interfere
 On Discord, I'll periodically run polls to gauge interest in specific learning topics, giving me time to prepare materials. Videos will be posted to YouTube, Rumble, and possibly Floatplane, while streams will appear on Twitch, Kick, TikTok, and YouTube.
 
 I'm not an expert by any means—just a lifelong learner. Feel free to offer constructive criticism and advice; I'm sure others will benefit from the insights!
-## Comments
-
-Discuss this post on GitHub:
-
-- [Open comments for Issue 1](https://github.com/apex13579/Blog/discussions)
-
-If Discussions isn’t enabled yet, use GitHub Issues and title your issue `Comments: Issue 1`.
