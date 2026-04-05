@@ -4,7 +4,7 @@ This page documents the software and tools I use in my homelab for virtualizatio
 
 ## Virtualization & OS
 - **Proxmox** - Hypervisor and VM management platform
-- **Alpine Linux** - Lightweight Linux distribution
+- **Linux Mint** - Lightweight Linux distribution
 
 ## Containerization & Orchestration
 - **Docker** - Container runtime
@@ -28,6 +28,7 @@ My setup focuses on lightweight, containerized applications running on Proxmox V
 - [ ] Documentation of key configurations
 
 Check back for detailed guides on setting up and configuring these tools!
+<<<<<<< HEAD
 
 ## Comments
 
@@ -36,3 +37,5 @@ Discuss this page on GitHub:
 - [Open the discussion page](https://github.com/apex13579/Blog/discussions)
 
 If Discussions isn’t enabled yet, use GitHub Issues and title your issue `Comments: Software Stack`.
+=======
+>>>>>>> 79261d37ff2e1a36754cb4a3473060dd9d060a70
