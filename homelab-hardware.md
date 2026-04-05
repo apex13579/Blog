@@ -24,11 +24,3 @@ This page documents my current lab setup and hardware. It will be updated as I a
 ## Notes
 
 Updates and improvements to this lab are documented in my blog posts. Check back for lab walkthroughs and configuration guides!
-
-## Comments
-
-Discuss this page on GitHub:
-
-- [Open the discussion page](https://github.com/apex13579/Blog/discussions)
-
-If Discussions isn’t enabled yet, use GitHub Issues and title your issue `Comments: Homelab Hardware`.

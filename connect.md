@@ -13,11 +13,3 @@ Follow my professional journey and IT career growth:
 ---
 
 More links coming soon!
-
-## Comments
-
-Discuss this page on GitHub:
-
-- [Open the discussion page](https://github.com/apex13579/Blog/discussions)
-
-If Discussions isn’t enabled yet, use GitHub Issues and title your issue `Comments: Connect`.
