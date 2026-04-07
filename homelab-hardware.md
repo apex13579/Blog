@@ -10,7 +10,7 @@ This page documents my current lab setup and hardware. It will be updated as I a
 - **Dell OptiPlex 3050** - NAS (in progress)
 
 ### Networking
-- **Cisco 2650** - Switch
+- **Cisco 3650** - Switch
 - **TP-Link AX1800** - Router and WAP (Wireless Access Point)
 - **Cisco ASA 2215-X** - Firewall (planned: will run OpnSense)
 
