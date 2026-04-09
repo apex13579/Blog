@@ -28,7 +28,7 @@ Here's my proposed weekly streaming schedule (all times in EST, 7pm to 9pm). Thi
 
 ## Goals and Community
 
-My aim is to post at least once a week, though life might occasionally interfere. This blog will document my IT journey, share tips and tricks I learn, and hopefully connect with others on similar paths to build a community of learners.
+My aim is to post at least once a month, though life might occasionally interfere. This blog will document my IT journey, share tips and tricks I learn, and hopefully connect with others on similar paths to build a community of learners.
 
 On Discord, I'll periodically run polls to gauge interest in specific learning topics, giving me time to prepare materials. Videos will be posted to YouTube, Rumble, and possibly Floatplane, while streams will appear on Twitch, Kick, TikTok, and YouTube.
 
