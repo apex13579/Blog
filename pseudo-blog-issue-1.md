@@ -20,7 +20,7 @@ Here's my proposed weekly streaming schedule (all times in EST, 7pm to 9pm). Thi
 
 - **Monday:** Streaming concepts from my study guides, with FAQs recorded on Discord.
 - **Tuesday:** RPG gaming sessions.
-- **Wednesday:** Blog post day, summarizing home lab work and sharing cheatsheets.
+- **Wednesday:** Blog day, summarizing home lab work and sharing cheatsheets.
 - **Thursday:** Co-op gaming.
 - **Friday:** Friday Night Magic with friends.
 - **Saturday:** IT learning streams (topics will vary).
