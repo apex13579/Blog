@@ -8,17 +8,24 @@
 
 ### VM
 
-- DB-VM - ~~Vaultwarden, webDav, Portainer, Gitea, Docker, Portainer~~, FALCO
-- CMD-VM - ~~Flame, Ansible, Python, Ntfy.sh, Traefik~~, FALCO
-- DNS-PRIMARY - adGuard home, NUT, FALCO
-- DNS-SECONDARY - adGuard home, NUT, FALCO
-- PKI - Step-CA, FALCO
-- DATA-VAULT - NFS, Samba, SQLite storage, FALCO
-- GUARD-DOG - ClamAV daemon + REST API, FALCO
-- SIEM - S.I.B (siem in a box), OpenVAS, FALCO
-- HOMEAUTO - Home Assistant Core, Mosquitto (MQTT), FALCO
-- HONEYPOT - T-Pot, FALCO
+- DB-VM - ~~Vaultwarden, webDav, Portainer AGENT, Gitea, Docker,~~, FALCO
+- CMD-VM - ~~Flame, Ansible, Python, Ntfy.sh, Traefik, portainer~~, FALCO, Pangolin
+- DNS-PRIMARY - adGuard home, NUT, FALCO, Portainer AGENT
+- DNS-SECONDARY - adGuard home, NUT, FALCO, Portainer AGENT
+- PKI - Step-CA, FALCO, Portainer AGENT
+- DATA-VAULT - NFS, Samba, SQLite storage, FALCO, Portainer AGENT
+- GUARD-DOG - ClamAV daemon + REST API, FALCO, Portainer AGENT
+- SIEM - S.I.B (siem in a box), OpenVAS, FALCOSidekick, Portainer AGENT
+- HOMEAUTO - Home Assistant Core, Mosquitto (MQTT), FALCO, Portainer AGENT
+- HONEYPOT - T-Pot, FALCO, Portainer AGENT
 
 ### LXC
 
 - JELLYFIN
+- vaultwarden (transfer creds)
+- gitea (transfer creds)
+
+### VPS
+
+- pangolin
+- falco
