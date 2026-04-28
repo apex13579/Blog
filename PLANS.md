@@ -8,7 +8,7 @@
 
 ### VM
 
-- DB-VM - ~~Vaultwarden, webDav, Portainer AGENT, Gitea, Docker,~~, FALCO
+- DB-VM - ~~Vaultwarden, webDav, Portainer AGENT, Gitea, Docker,~~ FALCO
 - CMD-VM - ~~Flame, Ansible, Python, Ntfy.sh, Traefik, portainer~~, FALCO, Pangolin
 - DNS-PRIMARY - adGuard home, NUT, FALCO, Portainer AGENT
 - DNS-SECONDARY - adGuard home, NUT, FALCO, Portainer AGENT
@@ -40,6 +40,7 @@
 ### COMPUTE
 - Three nuc low
 - UNAS PRO x2
+- ASUS GX10
 - 
 
 
