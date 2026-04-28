@@ -35,7 +35,12 @@
 - OPEN MEDIA VAULT
 - FALCO
 
+## HARDWARE
 
+### COMPUTE
+- Three nuc low
+- UNAS PRO x2
+- 
 
 
 
