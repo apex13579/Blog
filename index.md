@@ -11,6 +11,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 ## Lab & Projects
 - [Homelab Hardware](homelab-hardware.md) - Current setup and equipment
 - [Software Stack](software-stack.md) - Tools and applications
+- [Plans](PLANS.md) - Upgrade plans for both hardware and software
 
 ## Latest Posts
 
