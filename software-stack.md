@@ -13,8 +13,10 @@ This page documents the software and tools I use in my homelab for virtualizatio
 ## Services & Applications
 - **Vaultwarden** - Bitwarden-compatible password manager
 - **ntfy.sh** - Notification service
-- **Cloudflared** - Cloudflare tunnel for secure access
-- **Ansible** - Automation and configuration management
+- **traefik** - Acts as my edge router and reverse proxy, handling SSL termination and routing traffic to my containerized services.
+- **Tailscale** - My zero-config Mesh VPN. It allows for secure, encrypted remote access to my lab without exposing ports to the public internet.
+- **Gitea** - My self-hosted Git service for version control of my configuration files
+- **WebDAV** - Serves as a critical data gateway, specifically used to synchronize my Joplin instances for persistent, cross-platform note-taking and documentation.
 
 ## Architecture Notes
 
