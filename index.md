@@ -6,7 +6,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Find Me Online](connect.md) - Discord, LinkedIn, and more
 
 ## Affiliate hub
-- [Affiliate Hub](Affiliate.md)
+- [Affiliate Hub](Affliliate.md)
 
 ## Lab & Projects
 - [Homelab Hardware](homelab-hardware.md) - Current setup and equipment
