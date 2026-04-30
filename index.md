@@ -8,6 +8,11 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 ## Affiliate hub
 - [Affiliate Hub](Affliliate.md)
 
+## Brand/company affiliations
+- [No-go]
+- [Approved]
+- [Gear I use] 
+
 ## Lab & Projects
 - [Homelab Hardware](homelab-hardware.md) - Current setup and equipment
 - [Software Stack](software-stack.md) - Tools and applications
