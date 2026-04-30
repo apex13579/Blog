@@ -11,7 +11,6 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 ## Brand/company affiliations
 - [No-go](no-go.md)
 - [Approved](approved.md)
-- [Gear I use] 
 
 ## Lab & Projects
 - [Homelab Hardware](homelab-hardware.md) - Current setup and equipment
