@@ -6,12 +6,20 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Find Me Online](connect.md) - Discord, LinkedIn, and more
 
 ## Affiliate hub
-- [Affiliate Hub](affiliate.md)
+- [Affiliate Hub](Affliliate.md)
+
+## Brand/company affiliations
+- [No-go]
+- [Approved]
+- [Gear I use] 
 
 ## Lab & Projects
 - [Homelab Hardware](homelab-hardware.md) - Current setup and equipment
 - [Software Stack](software-stack.md) - Tools and applications
 - [Plans](PLANS.md) - Upgrade plans for both hardware and software
+
+## Education
+- [See here](Certifications and education.md)
 
 ## Latest Posts
 
