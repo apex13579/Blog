@@ -9,8 +9,8 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Affiliate Hub](Affliliate.md)
 
 ## Brand/company affiliations
-- [No-go]
-- [Approved]
+- [No-go](no-go.md)
+- [Approved](approved.md)
 - [Gear I use] 
 
 ## Lab & Projects
@@ -19,7 +19,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Plans](PLANS.md) - Upgrade plans for both hardware and software
 
 ## Education
-- [See here](Certifications and education.md)
+- [See here](Certifications-and-education.md)
 
 ## Latest Posts
 
