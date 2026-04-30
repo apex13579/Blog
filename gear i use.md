@@ -1,1 +1,7 @@
+## PC setup
+-
 
+## software
+-
+## peripherals
+-
