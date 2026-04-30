@@ -19,7 +19,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Plans](PLANS.md) - Upgrade plans for both hardware and software
 
 ## Education
-- [See here](Certifications and education.md)
+- [See here](Certifications-and-education.md)
 
 ## Latest Posts
 
