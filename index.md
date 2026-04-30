@@ -9,7 +9,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Affiliate Hub](Affliliate.md)
 
 ## Brand/company affiliations
-- [No-go]
+- [No-go](no-go.md)
 - [Approved]
 - [Gear I use] 
 
