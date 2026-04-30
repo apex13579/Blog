@@ -18,6 +18,9 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Software Stack](software-stack.md) - Tools and applications
 - [Plans](PLANS.md) - Upgrade plans for both hardware and software
 
+## Education
+- [See here]( )
+
 ## Latest Posts
 
 - [Issue 1: Introduction and Streaming Schedule](pseudo-blog-issue-1.md) - April 4, 2026
