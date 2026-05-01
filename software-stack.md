@@ -1,32 +1,39 @@
-# My Software Stack
+# 🏗️ Homelab Architecture & Hardware
 
-This page documents the software and tools I use in my homelab for virtualization, containerization, automation, and services.
+This page serves as the living documentation for my laboratory environment. It tracks current specifications, active deployments, and the roadmap for upcoming infrastructure upgrades.
 
-## Virtualization & OS
-- **Proxmox** - Hypervisor and VM management platform
-- **Linux Mint** - Lightweight Linux distribution
+---
 
-## Containerization & Orchestration
-- **Docker** - Container runtime
-- **Portainer** - Docker management UI and container orchestration
+## 🛠️ Current Inventory
 
-## Services & Applications
-- **Vaultwarden** - Bitwarden-compatible password manager
-- **ntfy.sh** - Notification service
-- **traefik** - Acts as my edge router and reverse proxy, handling SSL termination and routing traffic to my containerized services.
-- **Tailscale** - My zero-config Mesh VPN. It allows for secure, encrypted remote access to my lab without exposing ports to the public internet.
-- **Gitea** - My self-hosted Git service for version control of my configuration files
-- **WebDAV** - Serves as a critical data gateway, specifically used to synchronize my Joplin instances for persistent, cross-platform note-taking and documentation.
+### **Compute & Virtualization**
+*   **Dell PowerEdge R610**  
+    *   **Role:** Primary Hypervisor / VM Server  
+    *   **Focus:** Core infrastructure services and laboratory sandboxing.
+*   **HP EliteDesk 800 G4**  
+    *   **Role:** Dedicated Media Server
+*   **Dell OptiPlex 5040**  
+    *   **Role:** AI Research & Development (Build in progress)
 
-## Architecture Notes
+### **Networking & Security**
+*   **Cisco 3650 Series Switch**  
+    *   **Role:** Core Switching & VLAN Management
+*   **TP-Link AX1800**  
+    *   **Role:** Edge Router & Wireless Access Point (WAP)
+*   **Cisco ASA 2215-X Firewall**  
+    *   **Status:** Provisioning Stage
+    *   **Goal:** Re-imaging with **OPNsense** for advanced edge protection and stateful inspection.
 
-My setup focuses on lightweight, containerized applications running on Proxmox VMs. Alpine Linux provides minimal resource overhead, while Docker and Portainer simplify deployments and management.
+---
 
-## Future Additions
+## 🚀 Progress Roadmap
 
-- [ ] Additional monitoring tools
-- [ ] More containerized services
-- [ ] Enhanced automation with Ansible playbooks
-- [ ] Documentation of key configurations
+- [ ] **Firewall Migration:** Configure Cisco ASA hardware with OPNsense.
+- [ ] **AI Integration:** Complete the Dell OptiPlex 5040 AI build.
+- [ ] **Observability:** Add centralized monitoring and management tools.
+- [ ] **Visualization:** Document and upload detailed lab diagrams and configurations.
 
-Check back for detailed guides on setting up and configuring these tools!
+---
+
+> [!TIP]
+> **Updates and Improvements:** Detailed configuration guides, troubleshooting logs, and walkthroughs for this hardware are documented in my blog posts. Check back for regular updates!

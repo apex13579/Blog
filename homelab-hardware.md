@@ -1,26 +1,39 @@
-# My Homelab Hardware
+# 🏗️ Homelab Architecture & Hardware
 
-This page documents my current lab setup and hardware. It will be updated as I add, upgrade, or replace equipment.
+This page serves as the living documentation for my laboratory environment. It tracks current specifications, active deployments, and the roadmap for upcoming infrastructure upgrades.
 
-## Current Setup
+---
 
-### Compute
-- **Dell R610** - VM Server (Hypervisor)
-- **HP EliteDesk 800 G4** - Media Server
-- **Dell OptiPlex 5040** - AI (in progress)
+## 🛠️ Current Inventory
 
-### Networking
-- **Cisco 3650** - Switch
-- **TP-Link AX1800** - Router and WAP (Wireless Access Point)
-- **Cisco ASA 2215-X** - Firewall (planned: will run OpnSense)
+### **Compute & Virtualization**
+*   **Dell PowerEdge R610**  
+    *   **Role:** Primary Hypervisor / VM Server  
+    *   **Focus:** Core infrastructure services and laboratory sandboxing.
+*   **HP EliteDesk 800 G4**  
+    *   **Role:** Dedicated Media Server
+*   **Dell OptiPlex 5040**  
+    *   **Role:** AI Research & Development (Build in progress)
 
-## Future Plans
+### **Networking & Security**
+*   **Cisco 3650 Series Switch**  
+    *   **Role:** Core Switching & VLAN Management
+*   **TP-Link AX1800**  
+    *   **Role:** Edge Router & Wireless Access Point (WAP)
+*   **Cisco ASA 2215-X Firewall**  
+    *   **Status:** Provisioning Stage
+    *   **Goal:** Re-imaging with **OPNsense** for advanced edge protection and stateful inspection.
 
-- [ ] Configure Cisco ASA 2215-X with OpnSense
-- [ ] Complete Dell OptiPlex 5040 AI build
-- [ ] Add monitoring and management tools
-- [ ] Document detailed lab diagrams and configurations
+---
 
-## Notes
+## 🚀 Progress Roadmap
 
-Updates and improvements to this lab are documented in my blog posts. Check back for lab walkthroughs and configuration guides!
+- [ ] **Firewall Migration:** Configure Cisco ASA hardware with OPNsense.
+- [ ] **AI Integration:** Complete the Dell OptiPlex 5040 AI build.
+- [ ] **Observability:** Add centralized monitoring and management tools.
+- [ ] **Visualization:** Document and upload detailed lab diagrams and configurations.
+
+---
+
+> [!TIP]
+> **Updates and Improvements:** Detailed configuration guides, troubleshooting logs, and walkthroughs for this hardware are documented in my blog posts. Check back for regular updates!
