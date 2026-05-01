@@ -1,5 +1,5 @@
 # 📔 Homelab Overhaul: Building a Command & Control Stack
-**Date:** April 4, 2026  
+**Date:** April 6, 2026  
 **Category:** Infrastructure / DevOps  
 
 I’ve continued my homelab overhaul with a fresh base stack running on **Linux Mint**. The first VM I built is my **Command and Control (C2) node**, which acts as the central point for deploying, managing, and monitoring the rest of the environment. 
