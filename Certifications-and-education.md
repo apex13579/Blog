@@ -2,35 +2,43 @@
 
 ## 🏛️ Academic Degrees
 *   **A.S. Cybersecurity**
-*   **A.S. Network Systems Technology**
-*   **A.S. Computer Programming and Analysis**
+*   **A.S. Networking**
+*   **A.S. Computer Programming**
+
+---
 
 ## 📜 Certification Roadmap
 
-### **Completed**
+### **✅ Completed**
 *   ~~**TCM Security:** Soft Skills~~
 *   ~~**Google:** IT Support Professional~~
 *   ~~**FSU:** Customer Service Foundations~~
 *   ~~**Google:** Data Analytics Professional~~
 *   ~~**Google:** Project Management Professional~~
 
-### **In Progress / Current Target**
-*   **Google:** Cybersecurity Professional (Current Focus)
-*   **Cisco:** CCNA (Class Scheduled)
+### **🚀 Current Targets (The Foundation)**
+1.  **Google:** Cybersecurity Professional (**Current Focus**)
+2.  **Cisco:** CCNA (**Class Scheduled**)
+3.  **ISC²:** Certified in Cybersecurity (CC)
+4.  **Microsoft:** AZ-900 (Azure Fundamentals)
 
-### **Infrastructure & Cloud**
-*   **Microsoft:** AZ-900 (Azure Fundamentals)
-*   **ISC²:** Certified in Cybersecurity (CC)
+### **🛡️ Professional Infrastructure Mastery**
+5.  **Cisco: CCNP Security**
+    *   *Exam 1:* **350-701 SCOR** (Core)
+    *   *Exam 2:* **300-740 SCAZT** (Zero Trust/Cloud Concentration)
+   
 
-### **Advanced Security & Compliance**
-*   **ISC²:** Certified in Governance, Risk and Compliance (CGRC)
-*   **ISC²:** Certified Cloud Security Professional (CCSP)
-*   **ISC²:** Certified Information Systems Security Professional (CISSP)
+### **⚔️ Offensive Security (Hack The Box)**
+6.  **HTB: Certified Web Exploitation Specialist (CWES)**
+7.  **HTB: Certified Penetration Testing Specialist (CPTS)**
+8.  **HTB: Certified Web Exploitation Expert (CWEE)**
 
-### **Offensive Security (Hack The Box)**
-*   **HTB:** Certified Penetration Testing Specialist (CPTS)
-*   **HTB:** Certified Bug Bounty Hunter (CBBH)
-*   **HTB:** Certified Web Exploitation Expert (CWEE)
+### **🏛️ Strategic & Executive Pinnacle**
+9.  **ISC²:** Certified in Governance, Risk and Compliance (CGRC)
+10. **ISC²:** Certified Cloud Security Professional (CCSP)
+11. **ISC²:** Certified Information Systems Security Professional (CISSP)
 
-## 🏆 Specialized Training
-*   **FreeCodeCamp Gauntlet:** (Integration into technical portfolio in progress)
+---
+
+## 🏆 Specialized Training & Projects
+*   **FreeCodeCamp Gauntlet:** Full-stack integration into GitHub portfolio.
