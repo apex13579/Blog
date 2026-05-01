@@ -6,5 +6,8 @@
  
 - here is a pc parts picker list for a pc i plan to build in the future (subject to change)
   - <https://pcpartpicker.com/user/Apex_13579/saved/vkcvqs>
+ 
+- here is my store. it still has bugs that are being worked out
+  - <https://sweatt-labs-shop.fourthwall.com/>
 
   - I know full and well that some of the things (if not all) are rather expensive so only use the wishlist if you think I have earned your support.
