@@ -21,7 +21,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [See here](Certifications-and-education.md)
 
 ## Cheat sheet
-- [bash]( )
+- [bash](bash.md)
 
 ## Latest Posts
 
