@@ -1,35 +1,30 @@
-# Pseudo-Blog Issue 1
+# 📝 Pseudo-Blog Issue #1
 
 **Date:** April 4, 2026
 
-Welcome to the first issue of my Pseudo-Blog! This will serve as a temporary blog until I fully develop the platform. Today marks the beginning of my journey in documenting my experiences, and I'm excited to share it with you.
+Welcome to the inaugural issue of the Sweatt Labs Pseudo-Blog! This serves as the temporary headquarters for my technical documentation while the full platform is under development. Today marks the beginning of my journey in transparently documenting my research, lab builds, and career growth.
 
-## Certifications I'm Pursuing
+---
 
-I'm currently working towards several certifications to build my skills in IT:
+## 🏗️ The Mission & Community
+The goal of this blog is to document the "Sovereign Technician" journey—sharing the tips, tricks, and hard-earned lessons I encounter in the lab. I’ll be running periodic polls on **Discord** to see which technical topics you want to see covered next.
 
-- Google Data Analytics
-- Project Management
-- Cyber Security
-- AZ-900 (Microsoft Azure Fundamentals)
-- PCEP (Python Certified Entry-Level Programmer)
+I’m a lifelong learner, not an infallible expert. I welcome constructive criticism, technical advice, and insights from those further down the path. Let’s build a community of high-level problem solvers together.
 
-## Streaming Schedule
+---
 
-Here's my proposed weekly streaming schedule (all times in EST, 7pm to 9pm). This is subject to change, but it gives a general idea of what to expect:
+## 📡 Content & Streaming Schedule (Coming Soon)
+I will soon be streaming technical concepts and project brainstorming sessions. Catch the streams on **Twitch, Kick, TikTok, and YouTube**, with FAQs recorded on our Discord community.
 
-- **Monday:** Streaming concepts from my study guides, with FAQs recorded on Discord.
-- **Tuesday:** RPG gaming sessions.
-- **Wednesday:** Blog day, summarizing home lab work and sharing cheatsheets.
-- **Thursday:** Co-op gaming.
-- **Friday:** Friday Night Magic with friends.
-- **Saturday:** IT learning streams (topics will vary).
-- **Sunday:** Cozy games with family.
+*All stream times are **EST (7:00 PM – 9:00 PM)**. Daily gym sessions occur prior to the schedule.*
 
-## Goals and Community
-
-My aim is to post at least once a month, though life might occasionally interfere. This blog will document my IT journey, share tips and tricks I learn, and hopefully connect with others on similar paths to build a community of learners.
-
-On Discord, I'll periodically run polls to gauge interest in specific learning topics, giving me time to prepare materials. Videos will be posted to YouTube, Rumble, and possibly Floatplane, while streams will appear on Twitch, Kick, TikTok, and YouTube.
-
-I'm not an expert by any means—just a lifelong learner. Feel free to offer constructive criticism and advice; I'm sure others will benefit from the insights!
+| Day | Activity | Focus |
+| :--- | :--- | :--- |
+| **Mon - Sat** | **Physical Training** | **Gym (2 Hours):** Building the disciplined technician. |
+| **Monday** | **Study Stream** | Concept-by-concept deep dives into technical guides. |
+| **Tuesday** | **RPG Night** | Tactical gaming & community hangout. |
+| **Wednesday**| **Blog Release** | **Monthly Post:** First Wednesday of every month. |
+| **Thursday** | **Just Chatting** | **Project Ideas:** Brainstorming and open discussion. |
+| **Friday** | **FNM** | Friday Night Magic (Off-stream with friends). |
+| **Saturday** | **Lab Time** | **Strictly Lab Work:** (No Stream / Focus on Documentation). |
+| **Sunday** | **Cozy Gaming** | Family time and low-stress gaming. |
