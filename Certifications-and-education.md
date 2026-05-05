@@ -37,6 +37,7 @@
 9.  **ISC²:** Certified in Governance, Risk and Compliance (CGRC)
 10. **ISC²:** Certified Cloud Security Professional (CCSP)
 11. **ISC²:** Certified Information Systems Security Professional (CISSP)
+12. **Cisco: CCIE Security**   
 
 ---
 
