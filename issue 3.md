@@ -1,68 +1,484 @@
-# 🚀 Home Lab Notes: Stabilizing the Stack
-**Issue 3 — From Chaos to Clean Architecture**
-**Date:** May 2, 2026
+# Home Lab Notes: Stabilizing the Stack
+
+**Issue 03 — From Chaos to Clean Architecture**
+**Date: May 2, 2026**
+**Tags:** `Proxmox` `Docker` `Networking` `SQLite`
 
 ---
 
-The Lean Lab Manifesto and the Philosophy of Constraints
+## Why I Do This on Old Hardware on Purpose
 
-In the modern enterprise IT landscape, the standard response to a performance bottleneck is "scaling up"—throwing more RAM, more CPU cycles, and more budget at the problem until it disappears. This approach is effective in a corporate environment where downtime costs thousands of dollars per minute, but for the student, the educator, and the independent researcher, this "hardware wall" serves as a gatekeeper. It suggests that if you don't have a rack of power-hungry server blades, you aren't doing "real" engineering.
+My home lab runs on cheap, used hardware. That is not a mistake or a budget problem — it is the whole point.
 
-The core philosophy of Sweatt Labs is built on a direct rejection of this bloat. We treat hardware constraints not as an obstacle, but as a primary engineering feature. When you operate within the narrow margins of a 4GB or 8GB RAM environment, every megabyte matters. You are forced to understand the kernel, to optimize service backends, and to prioritize essential processes over "shiny object syndrome." This is where true architectural mastery is born. By proving that a professional-grade cybersecurity environment can run on a $20 thrift-store laptop or a discarded office PC, we democratize technical education. We prove that engineering excellence is a matter of logic and efficiency, not the size of your power bill.
-Architectural Foundations and the Type-1 Hypervisor
+In the IT world, people love to say "just throw more RAM at it" when something runs slow. If you work at a company where downtime costs money, that makes sense. But for someone learning, buying expensive hardware actually gets in the way. When you only have 4 or 8GB of RAM to work with, you are forced to understand what is eating it. You learn why a service is slow. You figure out what you actually need versus what just sounds cool.
 
-The foundation of any high-performance lab is the choice of virtualization. For this build, we utilize Proxmox VE, a Type-1 (bare-metal) hypervisor based on Debian. Unlike Type-2 hypervisors like VirtualBox or VMware Workstation, which run as applications on top of a heavy host operating system like Windows, Proxmox sits directly on the hardware. This eliminates the "middleman" OS, allowing our virtual machines and Linux Containers (LXCs) to access the CPU and RAM with near-zero overhead.
+The goal is to prove you do not need a server rack or a big power bill to build something real. A $20 laptop from a thrift store can run a serious setup if you know what you are doing. And if you do not know yet — that is what the lab is for.
 
-Within this environment, we implement a "Command Server" architecture. This is a dedicated virtual machine that serves as the centralized brain for the entire ecosystem. Rather than spreading management tools across multiple nodes, the Command Server consolidates monitoring, container orchestration, and secure remote access into a single, high-priority instance. By assigning this VM specific CPU affinity and utilizing VirtIO drivers for disk and network I/O, we ensure that our management plane remains responsive even if the rest of the lab is under heavy experimental load. This tiering of resources is a fundamental principle of high-availability design, ensuring that even if an experimental "sandbox" VM crashes the host's bridge, the Command Server remains the lighthouse in the storm.
-Physical Infrastructure and Additive Manufacturing
+---
 
-In the Lean Lab, we extend our engineering principles to the physical world. Professional server racks and cable management solutions are notoriously expensive, often costing more than the hardware they house. To combat this, we leverage additive manufacturing (3D printing) to create a custom-tailored physical environment. This allows us to bridge the gap between "messy hobbyist project" and "professional server installation."
+## The Foundation: Why I Use Proxmox
 
-Cable management is not merely an aesthetic choice; it is a thermal necessity. In a compact home lab, "spaghetti cabling" creates pockets of stagnant air that lead to localized overheating and premature hardware failure. By designing and printing custom cable combs, 1U patch panels, and mounting brackets for "1-liter" tiny PCs, we optimize the airflow across our nodes. We utilize PLA+ or PETG filaments for high-stress components to ensure they can withstand the constant heat of 24/7 operation. This approach allows us to invest our limited budget into internal components—like high-speed SSDs or additional RAM—while still maintaining a tier-1 physical infrastructure.
-The Great Network Restoration and the Anatomy of a Conflict
+The most important early decision was picking **Proxmox VE** as my virtualization platform. Proxmox is a Type-1 hypervisor — it runs directly on the hardware with no Windows or macOS sitting underneath it.
 
-Networking is the most common point of failure in any complex lab environment. Recently, the Sweatt Labs stack suffered a total service blackout: Vaultwarden, ntfy, and Portainer all became unreachable simultaneously. To the casual observer, it appeared as though the containers had crashed, but the actual failure was occurring at the host's networking layer. This was a classic case of "Port Squatting," where host-level services preempted the ports intended for Docker containers.
+> **Type-1 vs Type-2**
+>
+> Type-2 hypervisors (VirtualBox, VMware Workstation) run as apps inside another OS. Every VM call has to go through the host first — that is overhead you cannot reclaim.
+>
+> Type-1 (Proxmox) sits directly on bare metal. VMs and containers talk straight to the CPU and RAM. In a memory-constrained environment, that difference is felt immediately.
 
-In Linux, only one process can bind to a specific network port at a time. I discovered that a stale installation of Nginx and a CUPS print service had automatically started on the host, claiming ports 80 and 631 respectively. When Docker attempted to spin up its internal docker-proxy to map external traffic to the containers, the door was already locked. This illustrates the importance of the OSI Layer 4 (Transport), where port management lives. Understanding that a container "running" does not mean a container is "reachable" is a critical distinction in network troubleshooting.
-The Nuclear Network Reset Protocol
+Inside Proxmox I run what I call a **Command Server** — one VM that handles everything management-related: monitoring, container oversight, and remote access. The logic is simple: if an experiment crashes something, I still need a way back in. Keeping the management layer separate and giving it resource priority means I always have that lifeline.
 
-When a Docker network enters a stale state, simply restarting a container is rarely enough. The Docker engine manages a complex web of iptables rules and virtual bridges (usually docker0) that route traffic from your physical network card into the virtualized environment. When these rules become corrupted or conflict with host-level services, a "Nuclear Reset" is required to restore the stack.
+---
 
-The protocol begins with a total cessation of Docker activities using docker stop $(docker ps -aq). We then identify the squatter processes using sudo ss -tulpn or lsof -i, and permanently disable them via systemctl disable --now. Once the host ports are cleared, we flush the NAT tables and restart the Docker daemon. This forces the engine to re-scan the host's network interfaces and rebuild every routing rule from scratch. When the docker-proxy finally claims port 80, a successful curl -I test signals that the "Ghost in the Machine" has been exorcised. This systematic approach ensures that we aren't just treating symptoms, but reclaiming the underlying architecture.
-Knowledge Drop: Mastering IP Fundamentals
+## 3D Printing My Way to a Better Setup
 
-To secure a complex network, you must first be able to map it. An IP address is not just a string of four numbers; it is a 32-bit binary identity that dictates how every packet of data travels across the globe. Each octet in an IPv4 address represents 8 bits, with a maximum value of 255. Understanding the binary representation of these octets is the difference between a "user" and an "administrator."
+Professional cable management gear is expensive — sometimes more than the hardware it holds. So I started printing my own.
 
-In our lab, we utilize the Class A private range (10.x.x.x) to allow for massive scalability and clear logical separation. We apply a /24 subnet mask (255.255.255.0) to our subnets, which provides 254 usable host addresses per segment. By segregating our services—placing management tools on one subnet, production services on another, and an isolated "Sandbox" for risky experiments on a third—we implement a "Defense in Depth" strategy at the Network Layer (OSI Layer 3). This ensures that even if one service is compromised, the threat cannot easily "pivot" to the rest of the lab. This segmentation is the first step toward a "Zero Trust" architecture, where no device is trusted by default simply because it is on the local network.
-The SQLite Revolution and Database Efficiency
+This is not just aesthetics. Bad cable routing in a small space traps hot air, causing hardware to overheat over time. I printed cable guides, a small patch panel, and mounting brackets for my mini PCs.
 
-In professional data centers, heavy-duty relational databases like PostgreSQL or Microsoft SQL Server are the standard. They are designed for massive concurrency and high availability. However, in a home lab environment where the primary user count is one, these engines are often an unnecessary burden on system resources. A typical PostgreSQL container might idle at 200MB of RAM; in a lab with limited resources, that is 200MB that could be used for a security tool or a testing node.
+> **⚠ Material Note**
+>
+> Use **PETG or PLA+** for anything near sustained heat. Standard PLA deforms around 60°C — well within reach of a compact lab running 24/7. PETG handles it without issue.
 
-The transition to SQLite has been a game-changer for Sweatt Labs. Unlike traditional SQL servers, SQLite is "serverless"—the entire database is a single flat file stored on the disk. There is no background daemon eating RAM, and no complex network configuration required for the container to talk to its data. When we moved Vaultwarden and Gitea over to SQLite backends, we saw an immediate 40% reduction in idle memory usage and a significant increase in service startup speed. This shift proves that "Enterprise Grade" doesn't always mean "Best for the Mission."
-The WebDAV Pivot for Persistent Note-Taking
+Money saved on enclosures and mounts goes toward things that actually matter: faster SSDs, more RAM.
 
-Documentation is the most vital asset in the study process. For a long time, I struggled with the Joplin Server, a containerized note-syncing service that required its own database and complex file permissions. It was prone to SQLITE_CANTOPEN errors whenever the Proxmox mount point experienced a momentary delay. This created a paradox: I couldn't document my fixes because the documentation system itself was broken.
+---
 
-The solution was a pivot to WebDAV (Web Distributed Authoring and Versioning). WebDAV is a lean protocol that allows Joplin to sync notes as simple files over HTTP. By removing the database layer entirely from my note-taking workflow, I created a system that is virtually unkillable. The notes are stored as flat files on the server, making backups as simple as a cp command or an automated rsync script. This is the epitome of the Lean Lab: removing complexity to increase reliability.
-Python Automation: The Sentinel of the Deployment Pipeline
+## The Day Everything Went Down
 
-As part of the Google Cybersecurity Professional track, I’ve been diving deep into Python. In a home lab, Python isn't just a language to learn; it’s the glue that holds the security posture together. I have implemented a "Sentinel" script—a Python-based automation tool that scans my Docker Compose files for common security misconfigurations before they are deployed to the Command Server.
+A few weeks ago, Vaultwarden, ntfy, and Portainer all stopped responding at the same time. First instinct: the containers crashed. They had not.
 
-The script checks for "Privileged" flags, hardcoded passwords in environment variables, and unpinned image versions. By treating the lab "Infrastructure as Code" (IaC), we reduce the human error factor. This is a critical skill for any security professional: the ability to automate the "boring" parts of auditing so that focus can be shifted to more complex threat hunting. It moves the lab from a reactive state to a proactive security stance, allowing me to focus on the software logic of new projects rather than fixing broken deployments.
-Automation and the Telegram Notification Bridge
+The real problem was at the host's network layer. Two programs — a stale Nginx install and a CUPS print service — had auto-started on boot and grabbed the ports my Docker containers needed. In Linux, only one process can bind to a port at a time. When Docker tried to set up its internal routing, port 80 was already taken. The containers were running fine. They just had no path to receive traffic.
 
-A lab that doesn't alert you to a failure is a lab that is failing in silence. To bridge the gap between our server and our daily life, we utilize ntfy, an incredibly lightweight notification service. Unlike heavy enterprise monitoring suites, ntfy works via simple HTTP PUT/POST requests. If a script detects a high CPU temperature or a failed SSH login attempt, it sends a message to a local topic.
+> **🔴 Key Lesson**
+>
+> **"The container is running"** and **"the container is reachable"** are two completely different things. Container status and network reachability live on separate layers — they can fail independently of each other.
 
-To make these alerts even more accessible, I developed a custom Bash middleware script that acts as a bridge between ntfy and the Telegram Bot API. The script "long-polls" the local notification server and, upon receiving an alert, forwards the payload to my phone via an encrypted Telegram message. This setup provides real-time "eyes-on" capabilities for the lab without requiring any inbound ports to be opened on my router. It is a perfect example of Layer 7 (Application) integration—using simple scripts to make disparate systems work as a unified security ecosystem.
-Academic Progress and the Ultimate Certification Goal
+---
 
-Building the lab is only half the battle; the other half is the rigorous pursuit of theoretical knowledge. My current certification roadmap is designed to build a "T-Shaped" skill set: broad knowledge across IT domains with deep expertise in security. The completion of the Google Data Analytics and Project Management Professionals has provided the groundwork for handling large-scale datasets and managing complex technical rollouts.
+## How I Fixed It: The Nuclear Reset
 
-The current focus is the Google Cybersecurity Professional, where I am 50% complete. This track has been invaluable for formalizing my understanding of Linux security and SQL injection defense. However, the most anticipated milestone is the upcoming "Summer of CCNA" with Network Chuck. Moving from "hobbyist networking" to "Cisco-Certified Architecture" is the logical next step. The lab is now fully stabilized to support this transition, with Proxmox nodes being configured to support GNS3 and Cisco Packet Tracer for heavy-duty simulation work.
-Strategic Advice and the Path Forward
+Restarting the containers did nothing — which makes sense in hindsight. The containers were not the problem. The network routing underneath them was.
 
-The road to a stable, secure home lab is paved with failures, and those failures are your best teachers. As I conclude this architectural phase and pivot toward developing new virtual machine configurations and specialized software projects, I leave you with four core tenets. First, document everything—your digital journal is your most powerful tool. Second, embrace the "One Service Rule" to avoid dependency hell. Third, leverage 3D printing for physical efficiency. Fourth, master the CLI; that is where the true power of a security professional lives.
+**Steps that actually worked:**
 
-With the infrastructure stabilized and the command server acting as a silent sentinel, the foundation is laid. The lessons learned in stabilizing this stack—from the nuclear network reset to the SQLite revolution—will serve as the bedrock for every technical project that follows. Whether I am spinning up a new penetration testing VM or developing an educational curriculum, the principles of the Lean Lab remain the same: efficiency, documentation, and a relentless pursuit of knowledge.
+1. **Stop all containers** — halt everything before touching the network layer
+2. **Find what is squatting on your ports** — use `ss -tulpn` or `lsof -i` to see what process holds each port
+3. **Kill and permanently disable the offenders** — stop the process and prevent it auto-starting on next boot
+4. **Restart the Docker daemon** — `systemctl restart docker` flushes stale iptables rules and rebuilds all port mappings and virtual bridges from scratch automatically
+5. **Verify with curl** — a clean HTTP response confirms the proxy is up and routing correctly
 
-Stay curious. Stay secure. Happy self-hosting! 🚀
+```bash
+# nuclear_reset.sh
+
+# Step 1: halt all running containers
+docker stop $(docker ps -aq)
+
+# Step 2: find who is holding your ports
+sudo ss -tulpn | grep -E ':80|:631'
+# alternative: sudo lsof -i :80
+
+# Step 3: disable the offenders permanently
+sudo systemctl disable --now nginx
+sudo systemctl disable --now cups
+
+# Step 4: restart Docker
+# This flushes iptables and rebuilds all NAT rules and bridges automatically
+sudo systemctl restart docker
+
+# Step 5: confirm the stack is reachable
+curl -I http://localhost:80
+```
+
+The whole diagnosis and fix took about 45 minutes once I understood what was actually wrong. The containers were never the problem.
+
+---
+
+## IP Addresses: More Than Just Numbers
+
+One thing the Google Cybersecurity course drilled into me early: you cannot secure a network you do not understand. An IP address is a 32-bit binary number that determines how traffic gets routed — not just a label on a device.
+
+In my lab I use the **10.x.x.x** private range with a **/24 subnet** on each segment. A /24 gives you 256 addresses minus the network address and broadcast address — **254 usable hosts** per segment.
+
+More importantly, the segments are isolated on purpose:
+
+| Subnet | Purpose |
+|---|---|
+| Management | Command Server, Portainer, monitoring |
+| Production | Vaultwarden, ntfy, Gitea, live services |
+| Sandbox | Experimental VMs, anything that might break |
+
+If something in the sandbox goes wrong, it cannot easily reach the management plane. This is a beginner version of zero-trust networking: nothing gets access just because it is connected.
+
+---
+
+## Switching to SQLite Changed Everything
+
+My containers were using PostgreSQL as their database backend. PostgreSQL is great when you have many users hitting a database simultaneously. I have one user. That user is me.
+
+A PostgreSQL container sitting idle uses around 200MB of RAM. SQLite is a single file on disk — no background daemon, no network configuration, no extra moving parts. When I moved **Vaultwarden** and **Gitea** over to SQLite backends, idle memory usage dropped by roughly **40%** and both containers started noticeably faster.
+
+> **⚠ Know the Limits**
+>
+> SQLite is the right call for single-user, low-concurrency workloads. The moment you have multiple services writing simultaneously or need replication, PostgreSQL is the correct answer. Match the tool to the actual workload.
+
+The lesson: "enterprise grade" does not automatically mean "right for your situation."
+
+---
+
+## Fixing My Notes Setup: The WebDAV Pivot
+
+For a while I ran Joplin Server — a self-hosted sync service for the Joplin note-taking app. It kept throwing `SQLITE_CANTOPEN` errors whenever the storage mount had even a brief delay. The irony: I could not write down notes about fixing the problem because the note system was the broken thing.
+
+The fix was switching to **WebDAV**, which syncs notes as plain files over HTTP. No database. No daemon. Backup is a single `rsync` command. Removing the complexity fixed the reliability completely.
+
+This is the core principle of the lean lab applied to documentation: add complexity only when simpler solutions genuinely cannot do the job.
+
+---
+
+## Getting Alerts on My Phone
+
+A lab that breaks silently is not really a lab — it is just a pile of computers. I set up **ntfy**, a lightweight notification service that works by sending simple HTTP requests. Any script that can run `curl` can fire an alert.
+
+I also wrote a Bash script that bridges ntfy to Telegram. It long-polls the local ntfy server and forwards alerts to my phone as encrypted messages. No inbound ports required — all outbound traffic.
+
+```bash
+#!/bin/bash
+# ntfy_telegram_bridge.sh
+# Long-polls a local ntfy topic and forwards alerts to a Telegram bot.
+# Requirements: curl, jq
+# Usage: chmod +x ntfy_telegram_bridge.sh && ./ntfy_telegram_bridge.sh
+
+NTFY_URL="http://localhost:80/your-topic/json"
+BOT_TOKEN="your_telegram_bot_token"
+CHAT_ID="your_chat_id"
+TG_URL="https://api.telegram.org/bot${BOT_TOKEN}/sendMessage"
+
+# Send a message to Telegram
+send_telegram() {
+  local message="$1"
+  curl -s -X POST "$TG_URL" \
+    -d "chat_id=${CHAT_ID}" \
+    --data-urlencode "text=${message}" \
+    > /dev/null
+}
+
+echo "[*] Bridge live. Polling ${NTFY_URL}..."
+
+while true; do
+  # Block until the server sends an event (90s timeout prevents stale hang)
+  EVENT=$(curl -s --max-time 90 "${NTFY_URL}" | head -n 1)
+
+  # Only forward actual messages — skip keepalive/open events
+  EVENT_TYPE=$(echo "$EVENT" | jq -r '.event // "keepalive"')
+
+  if [[ "$EVENT_TYPE" == "message" ]]; then
+    TITLE=$(echo "$EVENT" | jq -r '.title // "Sweatt Labs Alert"')
+    MSG=$(echo "$EVENT" | jq -r '.message // ""')
+    PRIORITY=$(echo "$EVENT" | jq -r '.priority // "default"')
+
+    PAYLOAD="🔔 [${PRIORITY^^}] ${TITLE}\n${MSG}"
+    send_telegram "$PAYLOAD"
+    echo "[+] Forwarded: ${TITLE}"
+  fi
+
+  # Brief pause to avoid hammering on empty/error responses
+  sleep 2
+done
+```
+
+> **ℹ Firing an Alert from Any Script**
+>
+> From anywhere on the host: `curl -d "Disk usage at 90%" ntfy://localhost/your-topic`
+>
+> Failed SSH login, high CPU temp, container restart failure — anything that can run curl can trigger a notification.
+
+---
+
+## Where I Am with Certifications
+
+The longer-term goal is a T-shaped skill set: broad general IT knowledge with a deeper security specialization.
+
+| Status | Certification |
+|---|---|
+| ✅ Done | Google Data Analytics Professional |
+| ✅ Done | Google Project Management Professional |
+| ✅ Done | Google IT Support Professional |
+| 🔄 ~50% | Google Cybersecurity Professional |
+| 🎯 Next | CCNA — Summer push with Network Chuck |
+
+Proxmox is already configured to run **GNS3** and **Cisco Packet Tracer** for the CCNA work. The network segmentation built this issue is laying the mental groundwork for Cisco-level routing concepts.
+
+---
+
+## What I Would Tell Myself Six Months Ago
+
+**Write everything down.** Even if it feels obvious now. You will not remember it in three weeks, and your future self will be annoyed.
+
+**One service rule.** Keep services simple and separate. When one breaks it should not take three others with it.
+
+**Print your infrastructure.** 3D printing bridges the gap between hobbyist chaos and disciplined physical setup for almost nothing.
+
+**Live in the CLI.** Almost everything worth doing happens there. Learn it early and the rest gets easier.
+
+The stack is stable now. On to the next thing.
+
+*Stay curious. Stay secure. 🚀*
+
+---
+
+## Command Reference
+
+### Docker
+
+#### Container Lifecycle
+
+| Command | What It Does |
+|---|---|
+| `docker ps -a` | List all containers — running and stopped |
+| `docker stop $(docker ps -aq)` | Stop every running container at once |
+| `docker start <name>` | Start a stopped container by name |
+| `docker restart <name>` | Stop and start — reloads config |
+| `docker rm -f <name>` | Force-delete even a running container |
+
+#### Running Containers
+
+| Command | What It Does |
+|---|---|
+| `docker run -d` | Run detached (background) |
+| `docker run -p 8080:80` | Map host port 8080 → container port 80 |
+| `docker run -v vol:/path` | Mount a named volume into the container |
+| `docker run -e VAR=value` | Pass an environment variable |
+| `docker run --restart=unless-stopped` | Auto-restart unless manually stopped |
+
+#### Debugging
+
+| Command | What It Does |
+|---|---|
+| `docker logs -f <name>` | Tail live logs from a container |
+| `docker inspect <name>` | Full metadata — ports, mounts, network config |
+| `docker exec -it <name> bash` | Drop into a running container's shell |
+| `docker stats` | Live CPU and RAM usage per container |
+| `docker system prune -a` | Nuke all stopped containers, unused images and networks |
+
+#### Volumes & Networks
+
+| Command | What It Does |
+|---|---|
+| `docker volume ls` | List all named volumes |
+| `docker volume create <name>` | Create a named volume |
+| `docker network ls` | List all Docker networks |
+| `docker network inspect bridge` | Inspect default bridge + attached containers |
+
+---
+
+### Bash
+
+#### Navigation & Files
+
+| Command | What It Does |
+|---|---|
+| `ls -lah` | List with permissions, human-readable sizes, hidden files |
+| `cd -` | Jump back to previous directory |
+| `rsync -av src/ dest/` | Sync directories — better than cp for backups |
+| `find / -name "*.conf" 2>/dev/null` | Find files by name, suppress permission errors |
+| `chmod +x script.sh` | Make a script executable |
+
+#### Text Processing
+
+| Command | What It Does |
+|---|---|
+| `grep -r "pattern" /path` | Recursive string search across files |
+| `grep -E ':80\|:443'` | Extended regex — match multiple patterns |
+| `cat file \| jq '.'` | Pretty-print JSON output |
+| `awk '{print $2}'` | Extract the second column from output |
+| `tail -f /var/log/syslog` | Follow a log file live |
+
+#### Scripting
+
+| Syntax | What It Does |
+|---|---|
+| `$(command)` | Command substitution — use output as a value |
+| `if [[ "$VAR" == "val" ]]; then` | Conditional — use `[[ ]]` for strings, not `[ ]` |
+| `while true; do ... sleep 2; done` | Infinite loop with pause — used in the ntfy bridge |
+| `curl -s --max-time 90 "$URL"` | Silent curl with timeout — essential for long-polling |
+| `2>/dev/null` | Discard stderr — keeps script output clean |
+
+#### Cron
+
+| Syntax | What It Does |
+|---|---|
+| `crontab -e` | Edit current user's cron jobs |
+| `0 2 * * * /path/script.sh` | Run at 2:00 AM every day |
+| `*/5 * * * * /path/script.sh` | Run every 5 minutes |
+
+---
+
+### Python
+
+#### HTTP Requests
+
+| Snippet | What It Does |
+|---|---|
+| `import requests` | Load the requests library |
+| `r = requests.get(url, timeout=10)` | GET with a 10s timeout |
+| `r = requests.post(url, data={...})` | POST with form data |
+| `r.json()` | Parse JSON response body to dict |
+| `r.raise_for_status()` | Raise exception on 4xx or 5xx |
+
+#### File & System
+
+| Snippet | What It Does |
+|---|---|
+| `subprocess.run(["cmd","arg"], check=True)` | Run a shell command, raise error if it fails |
+| `os.environ.get("VAR")` | Read environment variables safely |
+| `json.loads(text)` | Parse a JSON string to dict |
+| `pathlib.Path("f").read_text()` | Read a file in one line |
+
+#### Patterns for Lab Scripts
+
+| Pattern | What It Does |
+|---|---|
+| `if __name__ == "__main__":` | Entry point guard — only runs when called directly |
+| `try: ... except Exception as e:` | Basic error handling — don't let scripts die silently |
+| `import argparse` | Parse CLI arguments cleanly |
+| `import logging; logging.basicConfig(...)` | Proper log output instead of print statements |
+
+---
+
+### Networking
+
+#### Port Investigation
+
+| Command | What It Does |
+|---|---|
+| `sudo ss -tulpn` | All listening ports + process holding each one |
+| `sudo lsof -i :80` | What process is using port 80 |
+| `sudo lsof -i -P -n \| grep LISTEN` | All listening sockets, no DNS resolution |
+
+#### Connectivity Testing
+
+| Command | What It Does |
+|---|---|
+| `curl -I http://localhost:80` | HTTP headers only — fastest way to confirm a service is up |
+| `curl -v http://host:port` | Verbose — shows full connection negotiation |
+| `ping -c 4 10.0.0.1` | Basic ICMP reachability check |
+| `traceroute 10.0.0.1` | Show each hop to the destination |
+| `nmap -sV 10.0.0.0/24` | Scan subnet for open ports and service versions |
+
+#### iptables — Docker Context
+
+| Command | What It Does |
+|---|---|
+| `sudo iptables -L -n -v` | List all rules with packet counts |
+| `sudo iptables -t nat -L -n` | NAT table — where Docker's port forwarding rules live |
+
+#### Interface Info
+
+| Command | What It Does |
+|---|---|
+| `ip addr show` | All interfaces and their IP addresses |
+| `ip route show` | Display the routing table |
+| `ip -br addr` | Brief, readable interface summary |
+
+---
+
+### Systemctl
+
+#### Service Control
+
+| Command | What It Does |
+|---|---|
+| `systemctl status <service>` | Running state, recent logs, PID |
+| `systemctl start <service>` | Start immediately |
+| `systemctl stop <service>` | Stop immediately |
+| `systemctl restart <service>` | Stop then start — reloads config |
+| `systemctl enable <service>` | Auto-start on boot |
+| `systemctl disable --now <service>` | Disable AND stop in one command |
+| `systemctl list-units --type=service` | List all active services |
+| `systemctl daemon-reload` | Reload systemd after editing unit files |
+
+#### Logs via journald
+
+| Command | What It Does |
+|---|---|
+| `journalctl -u <service> -f` | Follow live logs for a specific service |
+| `journalctl -u <service> --since "1h ago"` | Logs from the past hour |
+| `journalctl -p err -b` | Only errors since last boot |
+| `journalctl --vacuum-time=7d` | Delete logs older than 7 days |
+
+---
+
+### Proxmox
+
+#### VM Management
+
+| Command | What It Does |
+|---|---|
+| `qm list` | List all VMs and their status |
+| `qm start <vmid>` | Start a VM by ID |
+| `qm shutdown <vmid>` | Graceful shutdown via guest agent |
+| `qm stop <vmid>` | Force stop — hard power off |
+| `qm config <vmid>` | Full VM config — cores, RAM, disks, network |
+| `qm set <vmid> --memory 4096` | Change RAM allocation in MB |
+| `qm terminal <vmid>` | Attach to VM serial console |
+
+#### LXC Containers
+
+| Command | What It Does |
+|---|---|
+| `pct list` | List all LXC containers |
+| `pct start <ctid>` | Start an LXC container |
+| `pct enter <ctid>` | Open a shell inside the container |
+| `pct config <ctid>` | Show container config |
+| `pct set <ctid> --memory 512` | Update container memory limit |
+
+#### Storage & Backup
+
+| Command | What It Does |
+|---|---|
+| `pvesm status` | All storage backends and usage |
+| `vzdump <vmid> --storage <pool>` | Backup a VM or container |
+| `qmrestore <backup> <vmid>` | Restore a VM from a vzdump backup |
+
+#### Node Info
+
+| Command | What It Does |
+|---|---|
+| `pveversion` | Show Proxmox VE version |
+| `pve-firewall status` | Check Proxmox firewall state |
+
+---
+
+### SQLite
+
+#### Connecting
+
+| Command | What It Does |
+|---|---|
+| `sqlite3 database.db` | Open or create a database file |
+| `.tables` | List all tables |
+| `.schema <table>` | Show CREATE statement for a table |
+| `.mode column` | Format output as aligned columns |
+| `.headers on` | Show column names in query output |
+| `.quit` | Exit the SQLite shell |
+
+#### Common Queries
+
+| Query | What It Does |
+|---|---|
+| `SELECT * FROM table LIMIT 10;` | Preview first 10 rows |
+| `SELECT COUNT(*) FROM table;` | Count all rows |
+| `SELECT * FROM table WHERE col='val';` | Filter rows by value |
+| `UPDATE table SET col='val' WHERE id=1;` | Update a specific row |
+| `PRAGMA table_info(table);` | Show columns, types, and constraints |
+
+#### Backup & Maintenance
+
+| Command | What It Does |
+|---|---|
+| `sqlite3 db.db ".backup backup.db"` | Hot backup while the service is running |
+| `sqlite3 db.db "PRAGMA integrity_check;"` | Check for corruption |
+| `sqlite3 db.db "VACUUM;"` | Reclaim disk space, defragment the file |
+| `sqlite3 db.db ".dump" > dump.sql` | Export entire database as SQL text |
+| `sqlite3 new.db < dump.sql` | Restore from a SQL dump |
