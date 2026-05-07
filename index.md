@@ -20,8 +20,8 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 ## Education
 - [See here](Certifications-and-education.md)
 
-## Cheat sheet
-- [bash](bash.md)
+## Cheat sheet hub
+- [See here](Cheat_Sheet_Hub.md)
 
 ## Posts
 
