@@ -23,11 +23,11 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 ## Cheat sheet
 - [bash](bash.md)
 
-## Latest Posts
+## Posts
 
-- [Issue 1: Introduction and Streaming Schedule](pseudo-blog-issue-1.md) - April 4, 2026
-- [Issue 2: Homelab overhaul and walkthrough](Psudo-blog-issue-2.md) - April 6, 2026
-- [Issue 3: From Chaos to Clean Architecture](issue-3.md) - May 2, 2026 Tags:
+- [Issue Archive](issue_archive.md)
+- [New Issue](New_issue.md)
+
 
 ---
 
