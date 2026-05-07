@@ -2,6 +2,6 @@
 - [Python](https://github.com/apex13579/cheatsheet/blob/main/python.md)
 - [Sql](https://github.com/apex13579/cheatsheet/blob/main/sql.md)
 - [Cisco CLI](https://github.com/apex13579/cheatsheet/blob/main/cisco.md)
-- [systemctl](Psudo-blog-issue-2.md)
+- [systemctl](https://github.com/apex13579/cheatsheet/blob/main/Systemctl.md)
 - [Docker](issue-3.md)
 
