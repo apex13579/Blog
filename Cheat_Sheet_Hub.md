@@ -1,4 +1,4 @@
-- [Bash](pseudo-blog-issue-1.md)
+- [Bash](https://github.com/apex13579/cheatsheet/blob/main/bash.md)
 - [Python](Psudo-blog-issue-2.md)
 - [Sql](issue-3.md)
 - [Cisco CLI](pseudo-blog-issue-1.md)
