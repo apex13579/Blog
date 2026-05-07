@@ -26,6 +26,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 ## Posts
 
 - [Issue Archive](issue_archive.md)
+- [New Issue](New_issue.md)
 
 
 ---
