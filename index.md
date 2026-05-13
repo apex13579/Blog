@@ -29,7 +29,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [New Issue](New_issue.md)
 
 ## Staying on top of trends
-- [Resources](keeping up to date.md)
+- [Resources](keeping-up-to-date.md)
 
 
 
