@@ -3,3 +3,4 @@
 | topic | vender |
 | :--- | :--- |
 | History of cyber security | Darknet Diaries |
+| Current issues | Cyber wire daily |
