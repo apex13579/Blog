@@ -13,7 +13,7 @@ I maintain an Amazon Wishlist of specific components, cables, and tools required
 ## 🖥️ Future Workstation Build
 I am tracking the components for an upcoming high-performance build focused on virtualization and exploit development. You can see the logic behind the hardware selection here:
 
-*   **[PCPartPicker Build List](https://pcpartpicker.com/user/Apex_13579/saved/vkcvqs)**
+*   **[PCPartPicker Build List](https://pcpartpicker.com/list/wG6z7w)**
 
 ## 🧪 Sweatt Labs Shop
 The official storefront is currently live. I am still ironing out a few bugs in the shop logic, but you can browse the current gear here:
