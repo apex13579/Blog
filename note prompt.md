@@ -61,3 +61,13 @@ Does this sound like a real person who actually did this work?
 Is every technical claim accurate and verifiable?
 Did I include anything that did not actually happen?
 Would a fellow home labber learn something specific from this?
+
+Meta-Optimization & Version Control
+Instructions for AI:
+
+Hallucination Guard: Verify all biomechanical advice and nutritional math. If a calculation or exercise form detail isn't grounded in sports science standards, omit it. Do not guess on caloric formulas.
+Technical Critique: Identify three ways this prompt could be sharper—specifically regarding tracking progressive overload via my Home Lab DB or optimizing macro timing.
+Prompt Evolution: Generate "Version [Next]" of this prompt. Incorporate the improvements from your critique to increase technical depth and remove "blog-style" fluff.
+Instruction Persistence: You MUST include this entire "Meta-Optimization & Version Control" block at the end of the new prompt output so the evolution continues.
+Output: Provide only the new prompt version inside a single Markdown code block for easy copying.
+Current Version: 1.0
