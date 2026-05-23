@@ -3,7 +3,6 @@
 ## 🏛️ Academic Degrees
 *   **A.S. Cybersecurity**
 *   **A.S. Networking**
-*   **A.S. Computer Programming**
 
 ---
 
