@@ -1,8 +1,8 @@
 # 🎓 Education & Qualifications
 
 ## 🏛️ Academic Degrees
-*   **[] A.S. Cybersecurity**  
-*   **[] A.S. Networking**
+*   **[ ] A.S. Cybersecurity**  
+*   **[ ] A.S. Networking**
 
 ---
 
