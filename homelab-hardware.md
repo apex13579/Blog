@@ -12,8 +12,8 @@ This page serves as the living documentation for my laboratory environment. It t
     *   **Focus:** Core infrastructure services and laboratory sandboxing.
 *   **HP EliteDesk 800 G4**  
     *   **Role:** Dedicated Media Server
-*   **Dell OptiPlex 5040**  
-    *   **Role:** AI Research & Development (Build in progress)
+*   **Dell PowerEdge R610**  
+    *   **Role:** Nas
 
 ### **Networking & Security**
 *   **Cisco 3650 Series Switch**  
@@ -23,15 +23,6 @@ This page serves as the living documentation for my laboratory environment. It t
 *   **Cisco ASA 2215-X Firewall**  
     *   **Status:** Provisioning Stage
     *   **Goal:** Re-imaging with **OPNsense** for advanced edge protection and stateful inspection.
-
----
-
-## 🚀 Progress Roadmap
-
-- [ ] **Firewall Migration:** Configure Cisco ASA hardware with OPNsense.
-- [ ] **AI Integration:** Complete the Dell OptiPlex 5040 AI build.
-- [ ] **Observability:** Add centralized monitoring and management tools.
-- [ ] **Visualization:** Document and upload detailed lab diagrams and configurations.
 
 ---
 
