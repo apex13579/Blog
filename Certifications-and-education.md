@@ -1,8 +1,10 @@
 # 🎓 Education & Qualifications
 
 ## 🏛️ Academic Degrees
-*   ** [ ] A.S. Cybersecurity**  
-*   ** [ ] A.S. Networking**
+- [ ]   **A.S. Cybersecurity**  
+- [ ]   **A.S. Networking**
+- [ ]   **B.S. Cybersecurity**
+- [ ]   **M.S. Cybersecurity**
 
 ---
 
