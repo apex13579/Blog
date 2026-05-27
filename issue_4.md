@@ -1,85 +1,121 @@
-Core Objective: Establish a robust, self-hosted "Sovereign" infrastructure by deploying Type-1 hypervisors and resilient storage, alongside advancing foundational networking (transitioning to Network+) and security principles. The overarching goal is shifting from proprietary dependencies to controlled, open-source or heavily managed environments.
 
-Specific Linux Commands & Syntax:
+title: "Building the Sovereign Stack: From Cable Hell to ZFS Pools"
+date: 2026-06-03
+category: Infrastructure & Networking
+tags: [HomeLab, TrueNAS, Proxmox, LinuxMint, Network+]
+---
 
-nano (terminal text editor)
+## The Catalyst
+I finally got my 3D printer parts in and went to town on my server rack. I printed custom cable management, keystone patch panels, and blanks. I installed my new UPS and cleaned up the rat's nest using velcro and bread ties. Then, disaster struck. I finished the physical cleanup, fired everything up, and my Proxmox node completely dropped off the network. Here is how I recovered my hypervisor, built a new storage array, and fought a brutal permission battle.
 
-tracert -d [domain] (Windows route tracing)
+---
 
-Cisco IOS: show ip interface brief, show running config, configure terminal (or conf t), interface fastethernet 0/1, shutdown / no shutdown, write erase, enable
+## Rack Overhaul and Layer 1 Gremlins
+Cleaning the rack made the hardware look enterprise-grade, but it completely broke my environment. The Proxmox host went totally unreachable. I didn't change any network configurations, so I knew it was a physical layer issue. 
 
-Linux Permissions: sudo su, chown -R www-data:www-data /mnt/example/*
+> **> DANGER:** Messing with Layer 1 cables without tracing your drops will kill your management plane. Always label both ends of every run before you disconnect anything.
 
-Tool Versions & Software: Packet Tracer, Alpine Linux (abandoned), Linux Mint, Home Assistant, Matter Bridge, MQTT, Proxmox, TrueNAS SCALE, Nextcloud, Immich, AdGuard Home, Network UPS Tools (NUT), Jellyfin, Handbrake.
+I resisted the urge to panic-reconfigure the network interface files. I left the host online and let the switch ARP and DHCP tables cycle. After a few minutes, the IP self-corrected and management access restored itself. 
 
-Hardware Specs: Dell R610 (TrueNAS pool in RAIDZ2), Cisco ASA 5512-X (targeted for OPNsense flashing), custom 3D printed components for rack management, serial rollover cable + USB adapter.
+With the hypervisor stable, I spun up my primary DNS VM. I tried to use Alpine Linux to keep the footprint tiny. After an hour and a half of wrestling with configuration files, I rage quit. I went back to Linux Mint. 
 
-Friction Points & Resolutions:
+> **> SUCCESS:** Linux Mint trades a slightly larger RAM footprint for immediate, out-of-the-box driver stability. It kept the deployment moving when Alpine stalled my entire night.
 
-Friction: Alpine Linux proved too time-intensive for the current deployment sprint. Resolution: Pivoted to Linux Mint for rapid deployment of host OS tasks.
+This VM now hosts AdGuard Home for network-wide ad blocking and Network UPS Tools (NUT) to safely manage power downs.
 
-Friction: Physical rack rewiring caused Proxmox network unreachable state. Resolution: Allowed the switch ARP/DHCP tables to cycle; the IP self-corrected.
+---
 
-Friction: Nextcloud deployment on TrueNAS failed due to www-data ownership conflicts and domain trust bugs. Resolution: Applied recursive chown to correct directory permissions, but ultimately deprecated the Nextcloud container entirely in favor of researching lightweight, decoupled alternatives due to persistent legacy bugs.
+## TrueNAS SCALE and the Nextcloud Permission Trap
+I initialized TrueNAS SCALE on my second Dell PowerEdge R610. I set up a storage pool using RAIDZ2. It gives me two-disk fault tolerance. The array is small because hard drive prices are brutal right now, but it works. 
 
-Building the Sovereign Stack: From Infrastructure Foundations to Immutable Systems
-Date: May 2026
-Category: Infrastructure & Networking
-Tags: HomeLab, TrueNAS, OPNsense, Proxmox, LinuxMint, Network+
+I mapped the share to the network and tried to spin up Nextcloud and Immich. Nextcloud failed instantly due to a massive permissions error. The web app couldn't write data to the ZFS mount point. I dropped into the TrueNAS shell and forced the system to give the web daemon recursive ownership.
 
-THE CHALLENGE
-The modern digital landscape requires a shift away from fragile, vendor-locked architectures toward resilient, self-hosted environments. This month's deployment cycle focused on auditing and rebuilding a sovereign home data center, replacing black-box proprietary hardware with open-source firmware, and establishing a zero-trust network baseline. The objective was to solidify foundational networking protocols while standing up scalable, containerized services that lay the groundwork for truly immutable infrastructure.
-
-THE SOVEREIGN STACK
-The physical and logical topology relies on enterprise-grade hardware repurposed for sovereign control:
-
-Compute & Virtualization: Proxmox VE hosting diverse Linux Mint VMs and LXC containers.
-
-Storage: Dell PowerEdge R610 running TrueNAS configured with a RAIDZ2 pool for high-fault-tolerance data redundancy.
-
-Edge Security: Cisco ASA 5512-X, currently being prepped to flash OPNsense to enforce a default-deny ruleset.
-
-Core Services: Home Assistant (with MQTT and Matter Bridge), AdGuard Home, Network UPS Tools (NUT), and Jellyfin.
-
-Physical Layer: Custom 3D-printed keystone patch panels and cable management arrays.
-
-TECHNICAL IMPLEMENTATION
-1. Network Device Provisioning & Baselines
-Establishing a standardized configuration methodology is critical for network maintainability. Before moving to GUI-based firewall rules on OPNsense, foundational switch and router hygiene was enforced via standard serial console (9600 baud).
-
-A standard deployment template was utilized to baseline legacy Cisco hardware before transition:
-
-Plaintext
-1. Hostname application
-2. Banner MOTD
-3. Enable secret
-4. Console password and login
-5. VTY password and remote access settings
-6. Service password-encryption
-7. Management IP on VLAN 1
-8. Port descriptions
-9. Saving the configuration
-Note: When decommissioning or repurposing legacy gear, issuing write erase from privileged exec mode (enable) ensures no orphaned configurations introduce security vulnerabilities into the new topology.
-
-2. Storage Architecture and Permission Auditing
-A TrueNAS instance was initialized on the Dell R610, establishing a RAIDZ2 ZFS pool. During the deployment of web-facing applications, specifically Nextcloud, a critical permission mismatch occurred preventing the application container from writing to the mounted dataset.
-
-To resolve the data-layer conflict, ownership was forcefully reassigned to the web daemon user via the TrueNAS shell:
-
-Bash
+`TrueNAS Shell`
+```bash
+# Elevate to root privileges
 sudo su
+
+# Force web daemon ownership across the entire dataset path
 chown -R www-data:www-data /mnt/example/*
-Why this matters: Containerized applications operating without root privileges (a security best practice) require explicit ownership of their mapped volume mounts. Failing to align Host OS permissions with Container UID/GIDs results in silent failures or domain trust errors.
+```
 
-3. The Hypervisor and Services Layer
-Proxmox serves as the core hypervisor. To expedite deployment, Linux Mint was selected as the standard host OS for VMs over Alpine Linux, trading a marginally larger footprint for rapid deployment and out-of-the-box driver compatibility. Core infrastructure services, such as the primary DNS sinkhole (AdGuard Home) and UPS management (NUT), were decoupled and isolated within these VMs to prevent single points of failure.
+This fixed the storage layer, but the Nextcloud web UI immediately threw a domain trust error. I used `nano` to edit the config file. I finally reached the login screen, but the app still refused my credentials due to persistent database bugs. 
 
-THE WIN
-The lab infrastructure has successfully transitioned from an unmanaged, flat topology to a structured, sovereign stack. By standardizing the physical layer with custom 3D-printed management and isolating core services across TrueNAS and Proxmox, the environment is now stable enough to support advanced cybersecurity deployments. This structural integrity directly supports the transition toward declarative, immutable infrastructure, where state is defined by code rather than manual GUI configurations.
+> **> WARN:** Nextcloud's permission implementation on TrueNAS SCALE has been a known, documented community issue for 2.5 years. Do not waste days fighting it. I yanked the container completely and am replacing it with lightweight, decoupled apps.
 
-LESSONS LEARNED
-OSI Layer 1 Integrity: Physical topology alterations (rewiring the server rack) temporarily severed Proxmox connectivity. Strict adherence to cable labeling conventions and waiting for ARP cache expiration is vital before attempting logical troubleshooting.
+---
 
-Sunk Cost Fallacy in Software: Persistent permission bugs and domain trust issues within monolithic applications like Nextcloud can drain engineering cycles. Deprecating a failing monolithic service in favor of modular, lightweight applications is often the superior architectural decision.
+## Cisco IOS Baselines and the OSI Model
+I am prepped to flash OPNsense onto my Cisco ASA 5512-X firewall. To configure it, I hooked up a USB-to-serial rollover cable to the console port. I fired up my Linux terminal and set the serial connection speed to 9600 baud. 
 
-Zero-Trust from Day Zero: When bringing new edge devices online (like the planned OPNsense deployment), starting with a default-deny, zero-trust ruleset and opening ports selectively is far more secure than attempting to map all required traffic prior to deployment.
+My strategy for this security edge is strict: I am deploying a zero-trust, default-deny ruleset. I will open ports one by one as things break, rather than trying to map a complex policy beforehand. 
+
+While labbing, I mapped out exactly how data frames wrap layers when moving down the OSI stack:
+
+`OSI Data Frame Layer Architecture`
+```text
+[L2 trailer] [DATA] [L4 header] [L3 header] [L2 header]
+```
+
+Every hop through a router strips the Layer 2 source address and replaces it with its own. Before any data moves, my PC initiates a TCP 3-way handshake (`SYN` -> `SYN-ACK` -> `ACK`) to verify the path is completely open.
+
+---
+
+## Progress and Skill Overload
+I am shifting my configuration habits from basic GUI point-and-clicking to rigid command-line baselines. According to my Home Lab DB tracking, my physical rack cleanup reduced unlabelled links by 100%. However, undocumented cable swaps cost me an extra 45 minutes of troubleshooting time during the Proxmox outage. I am implementing a strict 6-task-a-day study framework over the weekends to keep my execution speed high.
+
+---
+
+## Retrospective
+* **Label everything:** Use different colorways for your patch cables. If you don't map both ends, Layer 1 will bite you during a physical migration.
+* **Ditch the monoliths:** When an application like Nextcloud fights your storage permissions for three hours, drop it. Lightweight, single-purpose containers are much easier to manage.
+* **Stop relying on active lookups:** I waste too much time googling basic commands inside my VMs. I need to run through my Anki flashcards daily to build raw command-line muscle memory.
+
+---
+
+## Certification Status
+I am halfway through the Google Cybersecurity Certificate, but the SQL modules are incredibly dry and the instructor lacks energy. To keep my momentum, I started Week 2 of Network Chuck’s Free CCNA course. The networking concepts are hitting home much faster. Once the Google cert is wrapped, I am taking a step back to target the ISC2 CC exam to build up my portfolio before moving to standard security certs.
+
+---
+
+## The Cheatsheets
+
+### Bash
+`bash_cheatsheet.sh`
+```bash
+# Open the terminal text editor inside your shell environment
+nano filename.txt
+
+# Trace the exact route and IP hops to a target domain without resolving DNS names
+tracert -d cisco.com
+```
+
+### Networking
+`cisco_ios_baseline.txt`
+```text
+# Standard Cisco IOS initial configuration workflow
+enable                  # Enter privileged EXEC mode
+configure terminal      # Drop into global configuration mode
+hostname Switch01       # Apply specific device naming convention
+write erase             # Completely wipe old startup configs on used gear
+```
+
+`interface_management.txt`
+```text
+# Basic port auditing and status verification
+show ip interface brief # Output a clean snapshot of all interface states
+show running-config     # Verify active running parameters against your template
+interface f0/1          # Enter interface configuration mode for FastEthernet 0/1
+shutdown                # Disable the port completely
+no shutdown             # Re-enable the interface and bring the link up
+```
+
+`subnet_math_reference.txt`
+```text
+# Classless Inter-Domain Routing (CIDR) /24 standard boundary
+A standard /24 subnet mask = 255.255.255.0
+Total Address Space        = 256 addresses
+Network Identifier         = -1 address
+Broadcast Address          = -1 address
+Total Usable Hosts         = 254 reachable hosts
+```
