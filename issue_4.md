@@ -87,7 +87,8 @@ I am halfway through the Google Cybersecurity Certificate, but the SQL modules a
 nano filename.txt
 
 # Trace the exact route and IP hops to a target domain without resolving DNS names
-tracert -d cisco.com
+tracert -d cisco.com (on windows)
+traceroute -n cisco.com (on linux)
 ```
 
 ### Networking
