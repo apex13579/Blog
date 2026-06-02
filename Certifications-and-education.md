@@ -19,7 +19,7 @@
 
 - [ ] CompTIA Network+
 
-## Communication & Writing
+## Communication & Writing (supplemental)
 
 - [ ] Learning Markdown — Ray Villalobos
 - [ ] Grammar Foundations — Mignon Fogarty
@@ -28,27 +28,31 @@
 - [ ] Writing a Compelling Blog Post — Starshine Roshell
 - [ ] Content Marketing: Blogging for Business — Martin Waxman
 
-## Version Control
+## Version Control (supplemental)
 
 - [ ] Programming Foundations: Version Control with Git — Christina Truong
 
-##: Identity & Network Boundaries
+##: Identity & Network Boundaries (supplemental)
 
 - [ ] Firewall Administration Essential Training — Jarrel Rivera
 - [ ] Open Source Firewalls — Malcolm Shore
 
 ## Full-Stack Web Development
 
-- [ ] FreeCodeCamp: Complete Certifications Stack (All 11 Modules)
+- [ ] FreeCodeCamp: Complete Certifications Stack (all)
 
 ## Enterprise Defense
 
 - [ ] CompTIA Security+
 
-## Professional Offensive Security (HTB)
+## Professional Offensive Security
 
 - [ ] CompTIA PenTest+
 
 ## Capstone
 
 - [ ] CompTIA SecurityX
+
+## upkeep
+- [ ] htb boxes and certs
+- [ ] tcm certs
