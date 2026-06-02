@@ -5,6 +5,8 @@ category: Infrastructure & Networking
 tags: [HomeLab, TrueNAS, Proxmox, LinuxMint, Network+]
 ---
 
+# Building the sovereign stack: from cable hell to ZFS pools
+
 ## The catalyst
 
 My 3D printer parts finally arrived and I went to town on the server rack. I printed custom cable management clips, keystone patch panels, and blanks. I installed a new UPS, cleaned up the rat's nest with velcro and zip ties, and stepped back feeling good about life. Then disaster struck: I fired everything up and my Proxmox node completely dropped off the network. Here's how I recovered the hypervisor, built a new storage array, and fought a brutal permissions battle along the way.
