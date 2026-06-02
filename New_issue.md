@@ -1,1 +1,1 @@
-- [Issue 3: From Chaos to Clean Architecture](issue-3.md) - May 2, 2026 Tags:
+- [Issue 4: Building the Sovereign Stack: From Cable Hell to ZFS Pools](issue-4.md) - june 3, 2026
