@@ -1,122 +1,76 @@
+Building the sovereign stack: from cable hell to ZFS pools
+June 3, 2026 · Infrastructure & Networking · HomeLab, TrueNAS, Proxmox, Linux Mint, Network+
+The catalyst
+My 3D printer parts finally arrived and I went to town on the server rack. I printed custom cable management clips, keystone patch panels, and blanks. I installed a new UPS, cleaned up the rat's nest with velcro and zip ties, and stepped back feeling good about life. Then disaster struck: I fired everything up and my Proxmox node completely dropped off the network. Here's how I recovered the hypervisor, built a new storage array, and fought a brutal permissions battle along the way.
 
-title: "Building the Sovereign Stack: From Cable Hell to ZFS Pools"
-date: 2026-06-03
-category: Infrastructure & Networking
-tags: [HomeLab, TrueNAS, Proxmox, LinuxMint, Network+]
----
+Rack overhaul and layer 1 gremlins
+The cleanup made the hardware look enterprise-grade — and completely broke my environment. The Proxmox host went totally unreachable. I hadn't changed any network configs, so I knew immediately this was a physical layer problem.
 
-## The Catalyst
-I finally got my 3D printer parts in and went to town on my server rack. I printed custom cable management, keystone patch panels, and blanks. I installed my new UPS and cleaned up the rat's nest using velcro and bread ties. Then, disaster struck. I finished the physical cleanup, fired everything up, and my Proxmox node completely dropped off the network. Here is how I recovered my hypervisor, built a new storage array, and fought a brutal permission battle.
+⚠ Danger: Touching Layer 1 cables without tracing your drops first will kill your management plane. Label both ends of every run before you disconnect anything.
+I resisted the urge to panic-reconfigure network interface files, left the host online, and let the switch's ARP and DHCP tables cycle. A few minutes later the IP self-corrected and management access came back. Crisis averted by doing nothing.
 
----
+With the hypervisor stable, I spun up my primary DNS VM. I tried Alpine Linux first to keep the footprint tiny — and spent an hour and a half wrestling config files before rage-quitting back to Linux Mint.
 
-## Rack Overhaul and Layer 1 Gremlins
-Cleaning the rack made the hardware look enterprise-grade, but it completely broke my environment. The Proxmox host went totally unreachable. I didn't change any network configurations, so I knew it was a physical layer issue. 
+✓ Success: Linux Mint trades a slightly larger RAM footprint for immediate, out-of-the-box driver stability. It kept the deployment moving when Alpine stalled my entire night.
+This VM now hosts AdGuard Home for network-wide ad blocking and Network UPS Tools (NUT) for safe power-down management.
 
-> **> DANGER:** Messing with Layer 1 cables without tracing your drops will kill your management plane. Always label both ends of every run before you disconnect anything.
+TrueNAS SCALE and the Nextcloud permission trap
+I initialized TrueNAS SCALE on my second Dell PowerEdge R610 and set up a storage pool using RAIDZ2 — a ZFS configuration that tolerates two simultaneous disk failures without data loss. Hard drive prices are brutal right now so the array is small, but it works.
 
-I resisted the urge to panic-reconfigure the network interface files. I left the host online and let the switch ARP and DHCP tables cycle. After a few minutes, the IP self-corrected and management access restored itself. 
+I mapped the share to the network and tried to spin up Nextcloud and Immich. Nextcloud failed instantly with a massive permissions error: the web daemon couldn't write to the ZFS mount point. I dropped into the TrueNAS shell and forced recursive ownership:
 
-With the hypervisor stable, I spun up my primary DNS VM. I tried to use Alpine Linux to keep the footprint tiny. After an hour and a half of wrestling with configuration files, I rage quit. I went back to Linux Mint. 
-
-> **> SUCCESS:** Linux Mint trades a slightly larger RAM footprint for immediate, out-of-the-box driver stability. It kept the deployment moving when Alpine stalled my entire night.
-
-This VM now hosts AdGuard Home for network-wide ad blocking and Network UPS Tools (NUT) to safely manage power downs.
-
----
-
-## TrueNAS SCALE and the Nextcloud Permission Trap
-I initialized TrueNAS SCALE on my second Dell PowerEdge R610. I set up a storage pool using RAIDZ2. It gives me two-disk fault tolerance. The array is small because hard drive prices are brutal right now, but it works. 
-
-I mapped the share to the network and tried to spin up Nextcloud and Immich. Nextcloud failed instantly due to a massive permissions error. The web app couldn't write data to the ZFS mount point. I dropped into the TrueNAS shell and forced the system to give the web daemon recursive ownership.
-
-`TrueNAS Shell`
-```bash
-# Elevate to root privileges
+TrueNAS shell
 sudo su
-
-# Force web daemon ownership across the entire dataset path
 chown -R www-data:www-data /mnt/example/*
-```
+That fixed the storage layer, but the Nextcloud web UI immediately threw a domain trust error. I edited the config with nano, reached the login screen, and then hit persistent database bugs blocking authentication. I finally pulled the plug on the whole container.
 
-This fixed the storage layer, but the Nextcloud web UI immediately threw a domain trust error. I used `nano` to edit the config file. I finally reached the login screen, but the app still refused my credentials due to persistent database bugs. 
+⚠ Warning: Nextcloud's permission implementation on TrueNAS SCALE has been a known, documented community issue for over two years. Don't waste days fighting it. Replace it with lightweight, decoupled apps instead.
+Cisco IOS baselines and the OSI model
+I'm prepping to flash OPNsense onto a Cisco ASA 5512-X. To get into the device, I hooked a USB-to-serial rollover cable to the console port and connected at 9600 baud from my Linux terminal.
 
-> **> WARN:** Nextcloud's permission implementation on TrueNAS SCALE has been a known, documented community issue for 2.5 years. Do not waste days fighting it. I yanked the container completely and am replacing it with lightweight, decoupled apps.
+My security strategy is strict: zero-trust, default-deny, open ports one by one as things break rather than trying to map a complex policy upfront.
 
----
+While working through the concepts, I mapped out how data is encapsulated moving down the OSI stack. Each layer wraps the payload from the layer above it:
 
-## Cisco IOS Baselines and the OSI Model
-I am prepped to flash OPNsense onto my Cisco ASA 5512-X firewall. To configure it, I hooked up a USB-to-serial rollover cable to the console port. I fired up my Linux terminal and set the serial connection speed to 9600 baud. 
+OSI encapsulation order (outermost → innermost)
+[L2 header] [L3 header] [L4 header] [DATA] [L2 trailer]
+At every router hop, the Layer 2 header is stripped and rewritten with the next-hop MAC address — the Layer 3 IP address stays intact end-to-end. Before any data moves, TCP runs a three-way handshake (SYN → SYN-ACK → ACK) to confirm the path is open.
 
-My strategy for this security edge is strict: I am deploying a zero-trust, default-deny ruleset. I will open ports one by one as things break, rather than trying to map a complex policy beforehand. 
+Progress and skill overload
+I'm shifting away from GUI point-and-click toward rigid command-line baselines. The rack cleanup reduced unlabelled links by 100% according to my home lab DB, but undocumented cable swaps during the cleanup cost me 45 extra minutes of troubleshooting. Lesson logged. I'm also implementing a strict 6-task-a-day study framework on weekends to keep execution speed high.
 
-While labbing, I mapped out exactly how data frames wrap layers when moving down the OSI stack:
+Retrospective
+Label everything. Use different colors for your patch cables. If you don't map both ends before you pull anything, Layer 1 will bite you every single time.
+Ditch the monoliths. When an app fights your storage permissions for three hours straight, drop it. Lightweight, single-purpose containers are dramatically easier to manage and debug.
+Build CLI muscle memory offline. Googling basic commands inside a production VM is slow and embarrassing. Run Anki flashcards daily so the commands are there when you need them.
+Certification status
+I'm halfway through the Google Cybersecurity Certificate, but the SQL modules are dry and the instructor lacks energy. To stay sharp, I started Week 2 of NetworkChuck's free CCNA course — the networking content is hitting home much faster. Once the Google cert is wrapped, I'll step back and target the ISC2 CC exam to build out my portfolio before moving into standard security certs.
 
-`OSI Data Frame Layer Architecture`
-```text
-[L2 trailer] [DATA] [L4 header] [L3 header] [L2 header]
-```
-
-Every hop through a router strips the Layer 2 source address and replaces it with its own. Before any data moves, my PC initiates a TCP 3-way handshake (`SYN` -> `SYN-ACK` -> `ACK`) to verify the path is completely open.
-
----
-
-## Progress and Skill Overload
-I am shifting my configuration habits from basic GUI point-and-clicking to rigid command-line baselines. According to my Home Lab DB tracking, my physical rack cleanup reduced unlabelled links by 100%. However, undocumented cable swaps cost me an extra 45 minutes of troubleshooting time during the Proxmox outage. I am implementing a strict 6-task-a-day study framework over the weekends to keep my execution speed high.
-
----
-
-## Retrospective
-* **Label everything:** Use different colorways for your patch cables. If you don't map both ends, Layer 1 will bite you during a physical migration.
-* **Ditch the monoliths:** When an application like Nextcloud fights your storage permissions for three hours, drop it. Lightweight, single-purpose containers are much easier to manage.
-* **Stop relying on active lookups:** I waste too much time googling basic commands inside my VMs. I need to run through my Anki flashcards daily to build raw command-line muscle memory.
-
----
-
-## Certification Status
-I am halfway through the Google Cybersecurity Certificate, but the SQL modules are incredibly dry and the instructor lacks energy. To keep my momentum, I started Week 2 of Network Chuck’s Free CCNA course. The networking concepts are hitting home much faster. Once the Google cert is wrapped, I am taking a step back to target the ISC2 CC exam to build up my portfolio before moving to standard security certs.
-
----
-
-## The Cheatsheets
-
-### Bash
-`bash_cheatsheet.sh`
-```bash
-# Open the terminal text editor inside your shell environment
+The cheatsheets
+Bash
+bash_cheatsheet.sh
+# Open the terminal text editor
 nano filename.txt
 
-# Trace the exact route and IP hops to a target domain without resolving DNS names
-tracert -d cisco.com (on windows)
-traceroute -n cisco.com (on linux)
-```
-
-### Networking
-`cisco_ios_baseline.txt`
-```text
-# Standard Cisco IOS initial configuration workflow
+# Trace the route and IP hops to a target (no DNS resolution)
+tracert -d cisco.com        # Windows
+traceroute -n cisco.com     # Linux
+Networking
+cisco_ios_baseline.txt
 enable                  # Enter privileged EXEC mode
 configure terminal      # Drop into global configuration mode
-hostname Switch01       # Apply specific device naming convention
-write erase             # Completely wipe old startup configs on used gear
-```
-
-`interface_management.txt`
-```text
-# Basic port auditing and status verification
-show ip interface brief # Output a clean snapshot of all interface states
-show running-config     # Verify active running parameters against your template
-interface f0/1          # Enter interface configuration mode for FastEthernet 0/1
-shutdown                # Disable the port completely
-no shutdown             # Re-enable the interface and bring the link up
-```
-
-`subnet_math_reference.txt`
-```text
-# Classless Inter-Domain Routing (CIDR) /24 standard boundary
-A standard /24 subnet mask = 255.255.255.0
-Total Address Space        = 256 addresses
-Network Identifier         = -1 address
-Broadcast Address          = -1 address
-Total Usable Hosts         = 254 reachable hosts
-```
+hostname Switch01       # Apply device naming convention
+write erase             # Wipe startup config on used gear
+interface_management.txt
+show ip interface brief # Snapshot of all interface states
+show running-config     # Verify active config against your baseline
+interface f0/1          # Enter config mode for FastEthernet 0/1
+shutdown                # Disable the port
+no shutdown             # Re-enable and bring the link up
+subnet_math_reference.txt
+# CIDR /24 subnet breakdown
+Subnet mask        = 255.255.255.0
+Total address space = 256 addresses
+Network address    = -1
+Broadcast address  = -1
+Usable hosts       = 254
