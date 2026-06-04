@@ -10,7 +10,7 @@ I maintain an Amazon Wishlist of specific components, cables, and tools required
 *   **[View the Amazon Wishlist](https://www.amazon.com/hz/wishlist/ls/BXVBBEO3TTE2?ref_=wl_share)**
 *   *Note: This is a direct link, not an affiliate link (subject to change as the blog matures).*
 
-*   **[UPS not on amazon](https://www.cdw.com/product/ubiquiti-unifi-ups-1000-watt-1500-va/8556029?pfm=srh)
+*   **[UPS not on amazon](https://www.cdw.com/product/ubiquiti-unifi-ups-1000-watt-1500-va/8556029?pfm=srh)**
 *   *note: This is a better fit than the previous ups I had on the amazon wishlist and is also cheaper.*
 
 ## 🖥️ Future Workstation Build
