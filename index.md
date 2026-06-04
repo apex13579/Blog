@@ -17,6 +17,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 - [Software Stack](software-stack.md) - Tools and applications
 - [Plans](PLANS.md) - Upgrade plans for both hardware and software
 - [Good packet tracer labs](https://github.com/PPechmann/Packet-Tracer-Practice-Labs) - I did not make these so please support PPechmann.
+- [More packet tracer labs](https://github.com/charan-s108/Cisco-Packet-Tracer-Labs/tree/main/Labs) - Please support charan-s108 as well
 
 ## Education Plan
 - [See here](Certifications-and-education.md)
