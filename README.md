@@ -10,7 +10,7 @@ I'm Apex, a lifelong learner diving into IT. This blog shares tips, tricks, and 
 
 All posts are in the root directory. Check out the latest:
 
-- [Issue 1: Introduction and Streaming Schedule](pseudo-blog-issue-1.md)
+- [start](index.md)
 
 ## How to Read
 
