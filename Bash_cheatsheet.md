@@ -24,3 +24,10 @@
 | `0 2 * * * /path/script.sh` | Run at 2:00 AM every day |
 | `*/5 * * * * /path/script.sh` | Run every 5 minutes |
 
+
+# Open the terminal text editor
+nano filename.txt
+
+# Trace the route and IP hops to a target (no DNS resolution)
+tracert -d cisco.com        # Windows
+traceroute -n cisco.com     # Linux
