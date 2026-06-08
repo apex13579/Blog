@@ -54,5 +54,5 @@
 - [ ] CompTIA SecurityX
 
 ## upkeep
-- [ ] HTB boxes and TCM security certs
-- [ ] tcm certs
+- [ ] HTB boxes and certs
+- [ ] TCM certs
