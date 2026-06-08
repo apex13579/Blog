@@ -13,3 +13,29 @@
 | `ip addr show` | All interfaces and their IP addresses |
 | `ip route show` | Display the routing table |
 | `ip -br addr` | Brief, readable interface summary |
+
+```text
+# cisco_ios_baseline.txt
+enable                  # Enter privileged EXEC mode
+configure terminal      # Drop into global configuration mode
+hostname Switch01       # Apply device naming convention
+write erase             # Wipe startup config on used gear
+```
+
+```text
+# interface_management.txt
+show ip interface brief  # Snapshot of all interface states
+show running-config      # Verify active config against your baseline
+interface f0/1           # Enter config mode for FastEthernet 0/1
+shutdown                 # Disable the port
+no shutdown              # Re-enable and bring the link up
+```
+
+```text
+# subnet_math_reference.txt
+Subnet mask         = 255.255.255.0
+Total address space = 256 addresses
+Network address     = -1
+Broadcast address   = -1
+Usable hosts        = 254
+```
