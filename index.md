@@ -1,6 +1,6 @@
-# Pseudo Blog
+# Sweatt Labs Blog
 
-Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the platform. Here, I'll document my IT journey, share tips, and build a community.
+Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop the platform. Here, I'll document my IT journey, share tips, and build a community.
 
 ## Connect
 - [Find Me Online](connect.md) - Discord, LinkedIn, and more
