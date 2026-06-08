@@ -32,7 +32,7 @@
 
 - [ ] Programming Foundations: Version Control with Git — Christina Truong
 
-##: Identity & Network Boundaries (supplemental)
+## Identity & Network Boundaries (supplemental)
 
 - [ ] Firewall Administration Essential Training — Jarrel Rivera
 - [ ] Open Source Firewalls — Malcolm Shore
@@ -54,5 +54,5 @@
 - [ ] CompTIA SecurityX
 
 ## upkeep
-- [ ] htb boxes and certs
+- [ ] HTB boxes and TCM security certs
 - [ ] tcm certs
