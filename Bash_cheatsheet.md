@@ -23,6 +23,32 @@
 
 ---
 
+### ⚙️ System Administration & Service Management (systemd)
+
+#### 🎛️ Service Control
+
+| Command | What It Does | Why it Matters |
+| :--- | :--- | :--- |
+| `systemctl status <service>` | Displays a service's running state, PID, and recent logs. | The absolute first diagnostic step to check if a background service is healthy, degraded, or crashed. |
+| `systemctl start <service>` | Launches a stopped background service immediately. | Brings a service online manually without needing to reboot the entire host machine. |
+| `systemctl stop <service>` | Halts a running service immediately. | Safely shuts down an application to perform maintenance or stop resource consumption. |
+| `systemctl restart <service>` | Force-stops and then immediately restarts a service. | Safely applies newly updated configuration files or clears out a frozen application state. |
+| `systemctl enable <service>` | Configures a service to automatically start up whenever the server boots. | Ensures critical applications (like web servers or Docker daemons) recover automatically after a reboot. |
+| `systemctl disable --now <service>` | Disables auto-start on boot AND kills the running service instantly. | A highly efficient combo command for permanently decommissioning or shutting down an unwanted service. |
+| `systemctl list-units --type=service` | Lists every single active service currently loaded on the system. | Gives you a complete, birds-eye inventory view of everything running on your server. |
+| `systemctl daemon-reload` | Forces systemd to scan for new or edited configuration files. | **Mandatory Step:** If you manually modify a `.service` file, changes are ignored until you run this. |
+
+#### 📜 Logs via journald
+
+| Command | What It Does | Why it Matters |
+| :--- | :--- | :--- |
+| `journalctl -u <service> -f` | Streams live, real-time logging output for a specific service. | Allows you to watch connection attempts, errors, and system activity occur live. |
+| `journalctl -u <service> --since "1h ago"` | Filters log outputs to show only messages from the last 60 minutes. | Drastically reduces noise when troubleshooting a problem that you know just happened recently. |
+| `journalctl -p err -b` | Filters logs to show only error messages since the current boot. | Instantly cuts through warning noise to show you exactly what failed or crashed since the last startup. |
+| `journalctl --vacuum-time=7d` | Automatically deletes all system log files older than 7 days. | Preventative maintenance. Keeps log sizes under control so they don't slowly consume your storage. |
+
+---
+
 ### ⚙️ Scripting & Automation Syntax
 
 Unlike standalone terminal commands, these statements and configuration formats are designed to be used inside your custom automation scripts and system configuration files.
