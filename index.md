@@ -21,7 +21,7 @@ Welcome to my Pseudo Blog! This is a temporary setup until I fully develop the p
 
 ## Education Plan
 - [See here](Certifications-and-education.md)
-- [Command list](
+- [Command list](command_list.md)
 
 ## Posts
 
