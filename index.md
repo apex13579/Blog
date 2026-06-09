@@ -20,7 +20,7 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 - [More packet tracer labs](https://github.com/charan-s108/Cisco-Packet-Tracer-Labs/tree/main/Labs) - Please support charan-s108 as well
 
 ## Education Plan
-- [See here](Certifications-and-education.md)
+- [Track my progress](Certifications-and-education.md)
 - [Command list](command_list.md)
 
 ## Posts
