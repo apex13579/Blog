@@ -49,10 +49,6 @@
 
 - [ ]   **CompTIA PenTest+**
 
-## Capstone
-
-- [ ]   **CompTIA SecurityX**
-
 ## upkeep
 - [ ]   **HTB boxes and certs**
 - [ ]   **TCM certs**
