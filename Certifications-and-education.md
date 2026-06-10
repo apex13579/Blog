@@ -62,4 +62,4 @@
   - [ ]   **Practical web hacking**
   - [ ]   **PWPP**
   - [ ]   **Advanced web hacking**
-  - [ ]   **PWPE
+  - [ ]   **PWPE**
