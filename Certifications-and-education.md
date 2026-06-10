@@ -48,6 +48,7 @@
 ## Professional Offensive Security
 
 - [ ]   **CompTIA PenTest+**
+- [ ]   **TCM PNPT**
 
 ## upkeep
 - [ ]   **HTB boxes and certs**
