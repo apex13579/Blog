@@ -51,4 +51,14 @@
 
 ## upkeep
 - [ ]   **HTB boxes and certs**
+  - [ ]   **Web penetration tester path**
+  - [ ]   **CWES**
+  - [ ]   **CWEE**
 - [ ]   **TCM certs**
+  - [ ]   **Practical web hacking**
+  - [ ]   **PWPA**
+  - [ ]   **Practical api hacking**
+  - [ ]   **Practical web hacking**
+  - [ ]   **PWPP**
+  - [ ]   **Advanced web hacking**
+  - [ ]   **PWPE
