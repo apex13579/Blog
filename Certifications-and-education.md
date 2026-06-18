@@ -13,7 +13,7 @@
 - [x]   **Google IT Support Professional**
 - [x]   **Google Project Management Professional**
 - [x]   **Google Data Analytics Professional**
-- [ ]   **Google Cybersecurity Professional**
+- [x]   **Google Cybersecurity Professional**
 
 ## Networking Deep Dive
 
