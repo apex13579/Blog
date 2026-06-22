@@ -21,7 +21,7 @@
 
 ## Communication & Writing (supplemental)
 
-- [ ]   **Learning Markdown — Ray Villalobos**
+- [x]   **Learning Markdown — Ray Villalobos**
 - [ ]   **Grammar Foundations — Mignon Fogarty**
 - [ ]   **Advanced Grammar — Judy Steiner-Williams**
 - [ ]   **A Crash Course in Writing Well — Shani Raja**
