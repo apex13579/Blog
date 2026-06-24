@@ -27,6 +27,7 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 
 - [Issue Archive](issue_archive.md)
 - [New Issue](New_issue.md)
+- [Lab Log](lab-log.md)
 
 ## Staying on top of trends
 - [Resources](keeping-up-to-date.md)
