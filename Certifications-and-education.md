@@ -17,9 +17,10 @@
 
 ## Networking Deep Dive
 
-- [ ]   **Network chuck Summer of CCNA**
+- [ ]   **Network chuck Summer of CCNA free**
 - [ ]   **Professor Messer youtube**
 - [ ]   **Cybrary course**
+- [ ]   **PM Networking troubleshooting playlist**
 - [ ]   **CompTIA Network+**
 
 ## Operating Systems & Scripting (Foundational)
