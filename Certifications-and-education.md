@@ -17,12 +17,16 @@
 
 ## Networking Deep Dive
 
+- [ ]   **Professer Messer youtube**
+- [ ]   **Cybrary course**
 - [ ]   **CompTIA Network+**
 
 ## Operating Systems & Scripting (Foundational)
 
-- [ ] **CompTIA Linux+**
+- [ ]   **YSAP with Dave Eddie**
 - [ ]   **FreeCodeCamp: Complete Certifications Stack (all)**
+- [ ]   **cybrary course**
+- [ ]   **CompTIA Linux+**
 
 ## Communication & Writing (supplemental)
 
@@ -44,10 +48,13 @@
 
 ## Enterprise Defense
 
+- [ ]   **professer messer youtube**
+- [ ]   **Cybrary course**
 - [ ]   **CompTIA Security+**
 
 ## Professional Offensive Security
 
+- [ ]   **Cybrary course**
 - [ ]   **CompTIA PenTest+**
 - [ ]   **TCM PNPT**
 
