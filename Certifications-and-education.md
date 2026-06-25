@@ -19,6 +19,11 @@
 
 - [ ]   **CompTIA Network+**
 
+## Operating Systems & Scripting (Foundational)
+
+- [ ] **CompTIA Linux+**
+- [ ]   **FreeCodeCamp: Complete Certifications Stack (all)**
+
 ## Communication & Writing (supplemental)
 
 - [x]   **Learning Markdown — Ray Villalobos**
@@ -36,10 +41,6 @@
 
 - [ ]   **Firewall Administration Essential Training — Jarrel Rivera**
 - [ ]   **Open Source Firewalls — Malcolm Shore**
-
-## Full-Stack Web Development
-
-- [ ]   **FreeCodeCamp: Complete Certifications Stack (all)**
 
 ## Enterprise Defense
 
