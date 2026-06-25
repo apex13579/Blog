@@ -17,7 +17,8 @@
 
 ## Networking Deep Dive
 
-- [ ]   **Professer Messer youtube**
+- [ ]   **Network chuck Summer of CCNA**
+- [ ]   **Professor Messer youtube**
 - [ ]   **Cybrary course**
 - [ ]   **CompTIA Network+**
 
@@ -48,7 +49,7 @@
 
 ## Enterprise Defense
 
-- [ ]   **professer messer youtube**
+- [ ]   **professor messer youtube**
 - [ ]   **Cybrary course**
 - [ ]   **CompTIA Security+**
 
