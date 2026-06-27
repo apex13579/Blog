@@ -52,7 +52,8 @@
 
 ## Enterprise Defense
 
-- [ ]   **professor messer youtube**
+- [ ]   **Professor messer youtube**
+- [ ]   **Firebrand nist bridge**
 - [ ]   **Cybrary course**
 - [ ]   **CompTIA Security+**
 
