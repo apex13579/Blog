@@ -241,7 +241,7 @@ VLAN table above. Three steps, every time:
    bit back in decimal)
 3. Add the increment repeatedly to find each successive network range
 
-Win (Tony Norrell gets full credit for this one): Subnetting finally became mechanical the moment a good friend explained it as a pizza. /24 is 256 slices. Every time the CIDR goes up by 1, cut it in half. Every time it drops by 1, double it. /25 = 128. /23 = 512. No chart, no memorization, no stress. I owe Tony a coffee — or several. That analogy alone saved me more time than I can calculate.
+Win: I have to stop here and give real credit where it is due. A good friend of mine, Anthony Norrell, broke subnetting down for me in a way that no course, no video, and no chart ever managed to. His explanation: think of /24 as a whole pizza with 256 slices. Increase the CIDR by 1 and you cut it in half. Decrease it by 1 and you double it. /25 is 128 slices. /23 is 512. No chart. No memorization. Just the formula and the doubling relationship. I went from dreading subnetting questions to doing them in my head. Tony, if you are reading this — thank you. That one conversation was worth more than hours of coursework.
 
 **Python for security automation**
 
@@ -259,8 +259,9 @@ every script that makes a lab run itself instead of requiring manual interventio
 
 The Google Cybersecurity Certificate is finished. It is a legitimate starting point and
 nothing more — unlimited quiz attempts, genuinely beginner-level content, and a credential
-that opens doors primarily as a signal that you can finish something. The Python module was
-the most directly applicable piece. The SQL modules were a slog. I am glad to have it done.
+that opens doors primarily as a signal that you can finish something but I feel it is not something
+that should be pushed since all you have to do to get it is to simply play the videos and guess enough and you get it.
+The Python module was the most directly applicable piece. The SQL modules were a slog. I am glad to have it done.
 
 The next target is Network+. The CCNA summer course from NetworkChuck is running in parallel
 and the networking content has been hitting significantly harder than anything in the Google
