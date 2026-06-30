@@ -1,1 +1,1 @@
-- [Issue 4: Building the Sovereign Stack: From Cable Hell to ZFS Pools](issue-5.md) - July 1, 2026
+- [Issue 5: Burning it down to build it right: lab rebuild, UPS wars, and the summer of CCNA](issue-5.md) - July 1, 2026
