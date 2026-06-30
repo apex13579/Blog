@@ -263,7 +263,7 @@ that opens doors primarily as a signal that you can finish something but I feel 
 that should be pushed since all you have to do to get it is to simply play the videos and guess enough and you get it.
 The Python module was the most directly applicable piece. The SQL modules were a slog. I am glad to have it done.
 
-The next target is Network+. The CCNA summer course from NetworkChuck is running in parallel
+The next target is Network+. The CCNA summer course from NetworkChuck (I was lucky enough to get in free) is running in parallel
 and the networking content has been hitting significantly harder than anything in the Google
 course. The goal is to understand what is being tested well enough that the exam itself is
 a formality — not to memorize answers, but to have actually configured the things the
