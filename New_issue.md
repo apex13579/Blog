@@ -1,1 +1,1 @@
-- [Issue 4: Building the Sovereign Stack: From Cable Hell to ZFS Pools](issue-4.md) - june 3, 2026
+- [Issue 4: Building the Sovereign Stack: From Cable Hell to ZFS Pools](issue-5.md) - July 1, 2026
