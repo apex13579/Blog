@@ -19,6 +19,7 @@
 
 ## Networking Deep Dive
 
+- [ ]   **Practical Networking: STP Series (YouTube)**
 - [ ]   **Network chuck Summer of CCNA free**
 - [ ]   **Professor Messer youtube**
 - [ ]   **Cybrary course**
@@ -39,6 +40,7 @@
 - [ ]   **Grammar Foundations — Mignon Fogarty**
 - [ ]   **Advanced Grammar — Judy Steiner-Williams**
 - [ ]   **A Crash Course in Writing Well — Shani Raja**
+- [ ]   **Google technical writing for developers**
 - [ ]   **Writing a Compelling Blog Post — Starshine Roshell**
 - [ ]   **Content Marketing: Blogging for Business — Martin Waxman**
 
