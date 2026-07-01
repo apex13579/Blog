@@ -7,7 +7,7 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 
 ## Pojects
 - [Current project](Current_projects.md)
-- [Completed projects]
+- [Completed projects](Completed_projects.md)
 - [Future projects]
 
 ## Affiliate hub
