@@ -14,6 +14,8 @@
 - [x]   **Google Project Management Professional**
 - [x]   **Google Data Analytics Professional**
 - [x]   **Google Cybersecurity Professional**
+- [ ]   **TCM secutity free**
+- [ ]   **TCM PHDA**
 
 ## Networking Deep Dive
 
@@ -56,12 +58,18 @@
 - [ ]   **Firebrand nist bridge**
 - [ ]   **Cybrary course**
 - [ ]   **CompTIA Security+**
+- [ ]   **TCM PEH**
+- [ ]   **TCM PJPT**
+- [ ]   **TCM OSINT FUNDEMENTALS**
 
 ## Professional Offensive Security
 
+- [ ]   **TCM PORP**
 - [ ]   **Cybrary course**
 - [ ]   **CompTIA PenTest+**
+- [ ]   **TCM EXTERNAL PENTEST PLAYBOOK**
 - [ ]   **TCM PNPT**
+- [ ]   **OSCP**
 
 ## upkeep
 - [ ]   **HTB boxes and certs**
