@@ -5,6 +5,11 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 ## Connect
 - [Find Me Online](connect.md) - Discord, LinkedIn, and more
 
+## Pojects
+- [Current project]
+- [Completed projects]
+- [Future projects]
+
 ## Affiliate hub
 - [Affiliate Hub](Affliliate.md)
 
