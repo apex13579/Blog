@@ -1,97 +1,124 @@
 # 🎓 Education & Qualifications
 
 ## 🏛️ Academic Degrees
-- [ ]   **A.S. Cybersecurity**  
-- [ ]   **A.S. Networking**
-- [ ]   **B.S. Cybersecurity**
+- [ ] **A.S. Cybersecurity**
+- [ ] **A.S. Networking**
+- [ ] **B.S. Cybersecurity**
 
 ---
 
 ## Foundations & Customer Success
+- [x] **FSU Customer Service**
+- [x] **Google IT Support Professional**
+- [x] **Google Project Management Professional**
+- [x] **Google Data Analytics Professional**
+- [x] **Google Cybersecurity Professional**
+- [ ] **TCM Security Free**
+- [ ] **TCM PHDA**
 
-- [x]   **FSU Customer Service**
-- [x]   **Google IT Support Professional**
-- [x]   **Google Project Management Professional**
-- [x]   **Google Data Analytics Professional**
-- [x]   **Google Cybersecurity Professional**
-- [ ]   **TCM secutity free**
-- [ ]   **TCM PHDA**
+---
 
 ## Networking Deep Dive
+- [ ] **Practical Networking: STP Series (YouTube)**
+- [ ] **NetworkChuck Summer of CCNA (Free)**
+- [ ] **Professor Messer Network+ (YouTube)**
+- [ ] **Cybrary Network+ Course**
+- [ ] **Professor Messer Networking Troubleshooting Playlist**
+- [ ] **CompTIA Network+**
 
-- [ ]   **Practical Networking: STP Series (YouTube)**
-- [ ]   **Network chuck Summer of CCNA free**
-- [ ]   **Professor Messer youtube**
-- [ ]   **Cybrary course**
-- [ ]   **PM Networking troubleshooting playlist**
-- [ ]   **CompTIA Network+**
+---
 
 ## Operating Systems & Scripting (Foundational)
+- [ ] **YSAP with Dave Eddie**
+- [ ] **FreeCodeCamp: Complete Certifications Stack**
+  - [ ] **Python — Scientific Computing with Python**
+  - [ ] **JavaScript — JavaScript Algorithms and Data Structures**
+  - [ ] **Node.js — Back End Development and APIs**
+  - [ ] **Bash — The Odin Project supplemental (Linux basics)**
+  - [ ] **SQL — Relational Database Certification**
+  - [ ] **PowerShell — Microsoft Learn: PowerShell Fundamentals (Free)**
+  - [ ] **Go — Learn Go with Tests (GitHub, free)**
+- [ ] **Cybrary Linux+ Course**
+- [ ] **XtendedGreg Alpine Linux Playlist**
+- [ ] **QZenith-CS Parrot OS Playlist**
 
-- [ ]   **YSAP with Dave Eddie**
-- [ ]   **FreeCodeCamp: Complete Certifications Stack (all)**
-  - [ ]   **PYTHON**
-  - [ ]   **JAVASCRIPT**
-  - [ ]   **NODE.JS**
-  - [ ]   **BASH**
-  - [ ]   **SQL**
-  - [ ]   **POWERSHELL**
-  - [ ]   **GO**
-- [ ]   **cybrary course**
-- [ ]   **XtendedGreg alpine linux playlist**
-- [ ]   **QZenith-CS parrot playlist**
+---
 
-## Communication & Writing (supplemental)
+## Communication & Writing (Supplemental)
+- [x] **Learning Markdown — Ray Villalobos**
+- [ ] **Grammar Foundations — Mignon Fogarty**
+- [ ] **Advanced Grammar — Judy Steiner-Williams**
+- [ ] **A Crash Course in Writing Well — Shani Raja**
+- [ ] **Google Technical Writing for Developers**
+- [ ] **Writing a Compelling Blog Post — Starshine Roshell**
+- [ ] **Content Marketing: Blogging for Business — Martin Waxman**
 
-- [x]   **Learning Markdown — Ray Villalobos**
-- [ ]   **Grammar Foundations — Mignon Fogarty**
-- [ ]   **Advanced Grammar — Judy Steiner-Williams**
-- [ ]   **A Crash Course in Writing Well — Shani Raja**
-- [ ]   **Google technical writing for developers**
-- [ ]   **Writing a Compelling Blog Post — Starshine Roshell**
-- [ ]   **Content Marketing: Blogging for Business — Martin Waxman**
+---
 
-## Version Control & Automation (supplemental)
+## Content Creation & Monetization (Supplemental)
+- [ ] **Video Production Basics — YouTube Creator Academy (Free)**
+- [ ] **Streaming Setup and Best Practices — Twitch Creator Camp (Free)**
+- [ ] **Course Creation — Teach Online with David Siteman Garland**
+- [ ] **SEO Fundamentals — Google Search Central (Free)**
+- [ ] **Affiliate Marketing Basics — Pat Flynn Smart Passive Income (Free)**
+- [ ] **Building a Personal Brand — LinkedIn Learning**
 
-- [ ]   **Programming Foundations: Version Control with Git — Christina Truong**
-- [ ]   **Ansible 101 — Jeff Geerling (YouTube Series)**
-- [ ]   **HashiCorp Terraform Associate Course — FreeCodeCamp (YouTube)**
+---
 
-## Identity & Network Boundaries (supplemental)
+## Version Control & Automation (Supplemental)
+- [ ] **Programming Foundations: Version Control with Git — Christina Truong**
+- [ ] **Ansible 101 — Jeff Geerling (YouTube Series)**
+- [ ] **HashiCorp Terraform Associate Course — FreeCodeCamp (YouTube)**
 
-- [ ]   **Firewall Administration Essential Training — Jarrel Rivera**
-- [ ]   **Open Source Firewalls — Malcolm Shore**
+---
+
+## SaaS & Web Development (Supplemental)
+- [ ] **Node.js and Express.js Full Course — FreeCodeCamp (YouTube)**
+- [ ] **REST API Design — The Odin Project (Free)**
+- [ ] **Stripe Payment Integration — Stripe Official Docs (Free)**
+- [ ] **Authentication and Authorization — Auth0 University (Free)**
+- [ ] **Deploying Node.js Apps — DigitalOcean Tutorials (Free)**
+- [ ] **SaaS Boilerplate Architecture — Fireship (YouTube)**
+
+---
+
+## Identity & Network Boundaries (Supplemental)
+- [ ] **Firewall Administration Essential Training — Jarrel Rivera**
+- [ ] **Open Source Firewalls — Malcolm Shore**
+
+---
 
 ## Enterprise Defense
+- [ ] **Professor Messer Security+ (YouTube)**
+- [ ] **Firebrand NIST Bridge**
+- [ ] **Cybrary Security+ Course**
+- [ ] **CompTIA Security+**
+- [ ] **CompTIA Cloud+**
+- [ ] **TCM Practical Ethical Hacking (PEH)**
+- [ ] **TCM PJPT**
+- [ ] **TCM OSINT Fundamentals**
 
-- [ ]   **Professor messer youtube**
-- [ ]   **Firebrand nist bridge**
-- [ ]   **Cybrary course**
-- [ ]   **CompTIA Security+**
-- [ ]   **comptia cloud+**
-- [ ]   **TCM PEH**
-- [ ]   **TCM PJPT**
-- [ ]   **TCM OSINT FUNDEMENTALS**
+---
 
 ## Professional Offensive Security
+- [ ] **TCM PORP**
+- [ ] **Cybrary PenTest+ Course**
+- [ ] **CompTIA PenTest+**
+- [ ] **TCM External Pentest Playbook**
+- [ ] **TCM PNPT**
+- [ ] **OSCP**
 
-- [ ]   **TCM PORP**
-- [ ]   **Cybrary course**
-- [ ]   **CompTIA PenTest+**
-- [ ]   **TCM EXTERNAL PENTEST PLAYBOOK**
-- [ ]   **TCM PNPT**
-- [ ]   **OSCP**
+---
 
-## upkeep
-- [ ]   **HTB boxes and certs**
-  - [ ]   **Web penetration tester path**
-  - [ ]   **CWES**
-  - [ ]   **CWEE**
-- [ ]   **TCM certs**
-  - [ ]   **Practical web hacking**
-  - [ ]   **PWPA**
-  - [ ]   **Practical api hacking**
-  - [ ]   **Practical web hacking**
-  - [ ]   **PWPP**
-  - [ ]   **Advanced web hacking**
-  - [ ]   **PWPE**
+## Upkeep
+- [ ] **HTB Boxes and Certs**
+  - [ ] **Web Penetration Tester Path**
+  - [ ] **CWES**
+  - [ ] **CWEE**
+- [ ] **TCM Certs**
+  - [ ] **Practical Web Hacking**
+  - [ ] **PWPA**
+  - [ ] **Practical API Hacking**
+  - [ ] **PWPP**
+  - [ ] **Advanced Web Hacking**
+  - [ ] **PWPE**
