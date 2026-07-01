@@ -30,6 +30,13 @@
 
 - [ ]   **YSAP with Dave Eddie**
 - [ ]   **FreeCodeCamp: Complete Certifications Stack (all)**
+- [ ]   - **PYTHON**
+- [ ]   - **JAVASCRIPT**
+- [ ]   - **NODE.JS**
+- [ ]   - **BASH**
+- [ ]   - **SQL**
+- [ ]   - **POWERSHELL**
+- [ ]   - **GO**
 - [ ]   **cybrary course**
 - [ ]   **XtendedGreg alpine linux playlist**
 - [ ]   **QZenith-CS parrot playlist**
