@@ -13,6 +13,9 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 ## Affiliate hub
 - [Affiliate Hub](Affliliate.md)
 
+## Living lists
+- [List archive]()
+
 ## Brand/company affiliations
 - [No-go](no-go.md)
 - [Approved](approved.md)
