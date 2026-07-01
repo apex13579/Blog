@@ -30,7 +30,6 @@
 - [ ]   **YSAP with Dave Eddie**
 - [ ]   **FreeCodeCamp: Complete Certifications Stack (all)**
 - [ ]   **cybrary course**
-- [ ]   **CompTIA Linux+**
 - [ ]   **XtendedGreg alpine linux playlist**
 - [ ]   **QZenith-CS parrot playlist**
 
