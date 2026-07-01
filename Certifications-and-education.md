@@ -34,10 +34,10 @@
   - [ ] **Python — Scientific Computing with Python**
   - [ ] **JavaScript — JavaScript Algorithms and Data Structures**
   - [ ] **Node.js — Back End Development and APIs**
-  - [ ] **Bash — The Odin Project supplemental (Linux basics)**
+  - [ ] **Bash — Ryan's Bash Scripting Tutorial (ryanstutorials.net, Free)**
   - [ ] **SQL — Relational Database Certification**
   - [ ] **PowerShell — Microsoft Learn: PowerShell Fundamentals (Free)**
-  - [ ] **Go — Learn Go with Tests (GitHub, free)**
+  - [ ] **Go — Learn Go with Tests (GitHub, Free)**
 - [ ] **Cybrary Linux+ Course**
 - [ ] **XtendedGreg Alpine Linux Playlist**
 - [ ] **QZenith-CS Parrot OS Playlist**
@@ -56,12 +56,13 @@
 ---
 
 ## Content Creation & Monetization (Supplemental)
-- [ ] **Video Production Basics — YouTube Creator Academy (Free)**
-- [ ] **Streaming Setup and Best Practices — Twitch Creator Camp (Free)**
-- [ ] **Course Creation — Teach Online with David Siteman Garland**
-- [ ] **SEO Fundamentals — Google Search Central (Free)**
-- [ ] **Affiliate Marketing Basics — Pat Flynn Smart Passive Income (Free)**
-- [ ] **Building a Personal Brand — LinkedIn Learning**
+- [ ] **YouTube Creator Academy — YouTube (Free)**
+- [ ] **Twitch Creator Camp — Twitch (Free)**
+- [ ] **Part-Time YouTuber Academy — Ali Abdaal**
+- [ ] **SEO for Technical Content — Google Search Central (Free)**
+- [ ] **Affiliate Marketing for Tech Creators — Pat Flynn Smart Passive Income (Free)**
+- [ ] **Personal Brand for Cybersecurity Professionals — LinkedIn Learning**
+- [ ] **Course Creation and Pricing Strategy — Teachable Creator Resources (Free)**
 
 ---
 
@@ -79,6 +80,9 @@
 - [ ] **Authentication and Authorization — Auth0 University (Free)**
 - [ ] **Deploying Node.js Apps — DigitalOcean Tutorials (Free)**
 - [ ] **SaaS Boilerplate Architecture — Fireship (YouTube)**
+- [ ] **SaaS Pricing Strategy — Stripe Atlas Guides (Free)**
+- [ ] **Finding and Validating SaaS Customers — Rob Walling Start Small Stay Small (Free chapters)**
+- [ ] **Product-Led Growth Fundamentals — ProductLed (Free)**
 
 ---
 
