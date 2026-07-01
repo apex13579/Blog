@@ -42,9 +42,11 @@
 - [ ]   **Writing a Compelling Blog Post — Starshine Roshell**
 - [ ]   **Content Marketing: Blogging for Business — Martin Waxman**
 
-## Version Control (supplemental)
+## Version Control & Automation (supplemental)
 
 - [ ]   **Programming Foundations: Version Control with Git — Christina Truong**
+- [ ]   **Ansible 101 — Jeff Geerling (YouTube Series)**
+- [ ]   **HashiCorp Terraform Associate Course — FreeCodeCamp (YouTube)**
 
 ## Identity & Network Boundaries (supplemental)
 
@@ -57,6 +59,7 @@
 - [ ]   **Firebrand nist bridge**
 - [ ]   **Cybrary course**
 - [ ]   **CompTIA Security+**
+- [ ]   **comptia cloud+**
 - [ ]   **TCM PEH**
 - [ ]   **TCM PJPT**
 - [ ]   **TCM OSINT FUNDEMENTALS**
