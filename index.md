@@ -6,7 +6,7 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 - [Find Me Online](connect.md) - Discord, LinkedIn, and more
 
 ## Pojects
-- [Current project]
+- [Current project](Current_projects.md)
 - [Completed projects]
 - [Future projects]
 
