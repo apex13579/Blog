@@ -1,7 +1,3 @@
-Here is your finalized, highly strategic roadmap.
-
-I have updated the Cisco security track to reflect their official 2025/2026 rebranding—the certifications are now officially named the **Cisco Certified Cybersecurity Associate** and **Cisco Certified Cybersecurity Professional** (formerly CyberOps). **Jeremy's IT Lab** is locked directly into your CCNA study block, and the OSCP is completely removed to keep your offensive track free of annual maintenance fees.
-
 # 🎓 Education & Qualifications
 
 ## 🏛️ Academic Degrees
@@ -19,8 +15,7 @@ I have updated the Cisco security track to reflect their official 2025/2026 rebr
 * [x] **Google Project Management Professional**
 * [x] **Google Data Analytics Professional**
 * [x] **Google Cybersecurity Professional**
-* [ ] **TCM Security Free**
-* [ ] **TCM PHDA**
+* [ ] **TCM Security Free Tier**
 * [ ] **AWS cloud practitioner**
 
 ---
