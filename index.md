@@ -23,7 +23,6 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 ## Lab & Projects
 - [Homelab Hardware](homelab-hardware.md) - Current setup and equipment
 - [Software Stack](software-stack.md) - Tools and applications
-- [Plans](PLANS.md) - Upgrade plans for hardware
 - [Good packet tracer labs](https://github.com/PPechmann/Packet-Tracer-Practice-Labs) - I did not make these so please support PPechmann.
 - [More packet tracer labs](https://github.com/charan-s108/Cisco-Packet-Tracer-Labs/tree/main/Labs) - Please support charan-s108 as well
 
