@@ -9,7 +9,6 @@ This page serves as the living documentation for my laboratory environment. It t
 ### **Compute & Virtualization**
 *   **Dell PowerEdge R610**  
     *   **Role:** Primary Hypervisor / VM Server  
-    *   **Focus:** Core infrastructure services and laboratory sandboxing.
 *   **HP EliteDesk 800 G4**  
     *   **Role:** Dedicated Media Server
 *   **Dell PowerEdge R610**  
@@ -25,6 +24,3 @@ This page serves as the living documentation for my laboratory environment. It t
     *   **Goal:** Re-imaging with **OPNsense** for advanced edge protection and stateful inspection.
 
 ---
-
-> [!TIP]
-> **Updates and Improvements:** Detailed configuration guides, troubleshooting logs, and walkthroughs for this hardware are documented in my blog posts. Check back for regular updates!
