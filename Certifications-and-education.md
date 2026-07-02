@@ -15,6 +15,7 @@
 - [x] **Google Cybersecurity Professional**
 - [ ] **TCM Security Free**
 - [ ] **TCM PHDA**
+- [ ] **AWS cloud practitioner**
 
 ---
 
@@ -97,7 +98,7 @@
 - [ ] **Firebrand NIST Bridge**
 - [ ] **Cybrary Security+ Course**
 - [ ] **CompTIA Security+**
-- [ ] **CompTIA Cloud+**
+- [ ] **AWS solutions architect associate**
 - [ ] **TCM Practical Ethical Hacking (PEH)**
 - [ ] **TCM PJPT**
 - [ ] **TCM OSINT Fundamentals**
@@ -110,6 +111,7 @@
 - [ ] **CompTIA PenTest+**
 - [ ] **TCM External Pentest Playbook**
 - [ ] **TCM PNPT**
+- [ ] **AWS solutions architect professional**
 - [ ] **OSCP**
 
 ---
