@@ -41,7 +41,7 @@ gateway - (cisco 5512-x with opnsense flash) (.01 on all vlans)
       - mosquitto
       - ntfy
       - apprise
-    - netbox lxc [1C, 2gb R, 20gb S] (ubuntu 24.04 ltsc)
+    - ~~netbox lxc [1C, 2gb R, 20gb S] (ubuntu 24.04 ltsc)~~
     - ~~adguard home lxc [1C, 512mb R, 8gb S]~~
     - ~~nut vm [1C, 512mb R, 4gb S]~~
       - ~~web ui~~
