@@ -42,6 +42,7 @@ gateway - (cisco 5512-x with opnsense flash) (.01 on all vlans)
       - ntfy
       - apprise
     - ~~netbox lxc [1C, 2gb R, 20gb S] (ubuntu 24.04 ltsc)~~
+      - ~~ping plugin (manual script has been written in case I need to bypass the web ui)~~
     - ~~adguard home lxc [1C, 512mb R, 8gb S]~~
     - ~~nut vm [1C, 512mb R, 4gb S]~~
       - ~~web ui~~
