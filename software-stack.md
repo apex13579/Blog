@@ -1,4 +1,4 @@
-gateway - (cisco 5512-x with opnsense flash) (.01 on all vlans)
+- gateway - (cisco 5512-x with opnsense flash) (.01 on all vlans)
   - crowdsec
   - geoip
 - nas 1 
