@@ -12,7 +12,7 @@
   - ~~proxmox w/  linux mint guest os for vm and debian 12 for lxc with falco for monitoring~~ and node exporter
     - wazuh lxc [2C, 8gb R, 50gb S]
     - opnvas lxc [1C, 8gb R, 40gb S]
-    - pbs lxc
+    - pbs lxc (nas target)
     - honey pot vm [1C, 1gb R, 15gb S]
       - cowrie
       - opencanary
