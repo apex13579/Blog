@@ -32,7 +32,7 @@ gateway - (cisco 5512-x with opnsense flash) (.01 on all vlans)
     - vault warden lxc [1C, 1gb R, 10gb S]
     - pangolin newt lxc [1C, 1gb R, 10gb S]
       - nginx
-    - nextcloud lxc [1C, 2gb R, 20gb S]
+    - ~~nextcloud lxc [1C, 2gb R, 20gb S]~~
     - jellyfin lxc [1C, 2gb R, 20gb S]
       - v-nic 2 
     - home auto lxc [1C, 4gb R, 32gb S]
