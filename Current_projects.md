@@ -1,4 +1,0 @@
-- [ ] Nextcloud
-  - This gave me quite the issue when I tried to install it on my nas which uses truenas. This is most likely a skill issue but I feel that a solid work around is to deploy it in an lxc.
-- [ ] Netbox
-  - This is my most recent obsession. If I am understanding it correctly this will help me with the ip addressing of all my services. This will come in handy when I start the subnet project. 
