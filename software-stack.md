@@ -28,19 +28,26 @@
       - portainer
       - prowler
       - node exporter
+      - IT tools
+      - link warden
+      - searxng
+      - excalidraw
     - hashicorp vault lxc [1C, 2gb R, 10gb S]
     - vault warden lxc [1C, 1gb R, 10gb S]
     - pangolin newt lxc [1C, 1gb R, 10gb S]
       - nginx
     - ~~nextcloud lxc [1C, 2gb R, 20gb S]~~
     - jellyfin lxc [1C, 2gb R, 20gb S]
-      - v-nic 2 
+      - v-nic 2
+      - arr stack
+      - dozzle
     - home auto lxc [1C, 4gb R, 32gb S]
       - home assistant
       - Zigbee2MQTT
       - mosquitto
       - ntfy
       - apprise
+      - flame
     - ~~netbox lxc [1C, 2gb R, 20gb S] (ubuntu 24.04 ltsc)~~
       - ~~ping plugin (manual script has been written in case I need to bypass the web ui)~~
     - ~~adguard home lxc [1C, 512mb R, 8gb S]~~
@@ -72,10 +79,4 @@
 # oracle cloud instances
 - pangolin 
 
-# possibility
-- dozzle
-- excalidraw
-- IT tools
-- link warden
-- searxng
-- some form of dashboard
+
