@@ -1,2 +1,0 @@
-- [ ] Firewall flash
-- [ ] Lab software deployed
