@@ -71,3 +71,11 @@
 
 # oracle cloud instances
 - pangolin 
+
+# possibility
+- dozzle
+- excalidraw
+- IT tools
+- link warden
+- searxng
+- some form of dashboard
