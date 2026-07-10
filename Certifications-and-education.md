@@ -30,11 +30,11 @@
 - [ ] **Microsoft Certified: Azure Administrator Associate (AZ-104)**
 - [ ] **CCNP Training:** Cisco U / INE / CBT Nuggets
 - [ ] **CCNP Simulation/Prep:** Boson (NetSim & ExSim-Max)
-- [ ] **Cisco Certified Network Professional (CCNP)**
+- [ ] **Cisco Certified Network Professional (CCNP Enterprise)**
 - [ ] **HTB Certified Web Exploitation Specialist (CWES)**
 
 ### Expert (Advanced)
 - [ ] **CCIE Training:** Cisco U / INE (Advanced Routing & Services)
 - [ ] **CCIE Simulation/Prep:** Boson (ENCOR/CCIE Mastery)
-- [ ] **Cisco Certified Internetwork Expert (CCIE)**
+- [ ] **Cisco Certified Internetwork Expert (CCIE Enterprise)**
 - [ ] **HTB Certified Web Exploitation Expert (CWEE)**
