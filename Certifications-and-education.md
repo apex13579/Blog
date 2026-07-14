@@ -22,7 +22,7 @@
 - [ ] **Azure Training:** John Savill’s Masterclass / Microsoft Learn
 - [ ] **Azure Simulation/Prep:** Boson ExSim-Max (AZ-900)
 - [ ] **Microsoft Certified: Azure Fundamentals (AZ-900)**
-- [ ] **HTB Certified Junior Cybersecurity Associate (CJCA)**
+- [ ] **TCM Security: Practical Web Pentest Associate (PWPA)**
 
 ### Intermediate (Professional)
 - [ ] **Azure Admin Training:** Microsoft Learn / Pluralsight
@@ -31,10 +31,13 @@
 - [ ] **CCNP Training:** Cisco U / INE / CBT Nuggets
 - [ ] **CCNP Simulation/Prep:** Boson (NetSim & ExSim-Max)
 - [ ] **Cisco Certified Network Professional (CCNP Enterprise)**
-- [ ] **HTB Certified Web Exploitation Specialist (CWES)**
+- [ ] **Red Hat Certified System Administrator (RHCSA - EX200)**
+- [ ] **TCM Security: Practical Web Pentest Professional (PWPP)**
 
 ### Expert (Advanced)
 - [ ] **CCIE Training:** Cisco U / INE (Advanced Routing & Services)
 - [ ] **CCIE Simulation/Prep:** Boson (ENCOR/CCIE Mastery)
 - [ ] **Cisco Certified Internetwork Expert (CCIE Enterprise)**
-- [ ] **HTB Certified Web Exploitation Expert (CWEE)**
+- [ ] **Red Hat Certified Engineer (RHCE - EX294)** *(Ansible Automation)*
+- [ ] **Red Hat Certified Architect (RHCA)** *(Requires 3 Specialty Certs: e.g., Security/EX415, High Availability/EX436)*
+- [ ] **TCM Security: Practical Web Pentest Expert (PWPE)**
