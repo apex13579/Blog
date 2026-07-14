@@ -4,6 +4,7 @@
 - [ ] **A.S. Cybersecurity**
 - [ ] **A.S. Networking**
 - [ ] **B.S. Cybersecurity**
+- [ ] **M.S. Cybersecurity**
 
 ## ✅ Completed Certifications
 - [x] **FSU Customer Service**
@@ -39,5 +40,5 @@
 - [ ] **CCIE Simulation/Prep:** Boson (ENCOR/CCIE Mastery)
 - [ ] **Cisco Certified Internetwork Expert (CCIE Enterprise)**
 - [ ] **Red Hat Certified Engineer (RHCE - EX294)** *(Ansible Automation)*
-- [ ] **Red Hat Certified Architect (RHCA)** *(Requires 3 Specialty Certs: e.g., Security/EX415, High Availability/EX436)*
+- [ ] **Red Hat Certified Architect (RHCA)** *(Requires 3 Specialty Certs: Security: Linux (EX415), Identity Management (EX362), Performance Tuning (EX442))*
 - [ ] **TCM Security: Practical Web Pentest Expert (PWPE)**
