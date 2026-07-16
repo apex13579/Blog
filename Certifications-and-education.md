@@ -3,6 +3,7 @@
 ## 🏛️ Academic Degrees
 - [ ] **A.S. I.T.**
 - [ ] **B.S. I.T.**
+  - Utilize the B.S./M.S. pathway 
 - [ ] **M.S. I.T.**
 
 ## ✅ Completed Certifications
