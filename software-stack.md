@@ -1,18 +1,17 @@
 - gateway - (cisco 5512-x with opnsense flash) (.01 on all vlans)
   - crowdsec
   - geoip
-- nas 1 
-  - ~~immich~~
-  - ~~uptime kuma lxc~~
-  - ~~tailscale lxc~~
-- nas 2
-  - ~~postgresql~~
-  - ~~redis~~
+- nas  
+  - immich
+  - uptime kuma lxc
+  - tailscale lxc
+  - postgresql
+  - redis
 - vm machine
-  - ~~proxmox w/  linux mint guest os for vm and debian 12 for lxc with falco for monitoring~~ and node exporter
+  - proxmox w/  linux mint guest os for vm and debian 12 for lxc with falco for monitoring and node exporter
     - wazuh lxc [2C, 8gb R, 50gb S]
     - opnvas lxc [1C, 8gb R, 40gb S]
-    - ~~pbs lxc (nas target)~~
+    - pbs lxc (nas target)
     - honey pot vm [1C, 1gb R, 15gb S]
       - cowrie
       - opencanary
@@ -36,7 +35,7 @@
     - vault warden lxc [1C, 1gb R, 10gb S]
     - pangolin newt lxc [1C, 1gb R, 10gb S]
       - nginx
-    - ~~nextcloud lxc [1C, 2gb R, 20gb S]~~
+    - nextcloud lxc [1C, 2gb R, 20gb S]
     - jellyfin lxc [1C, 2gb R, 20gb S]
       - v-nic 2
       - arr stack
@@ -48,16 +47,16 @@
       - ntfy
       - apprise
       - flame
-    - ~~netbox lxc [1C, 2gb R, 20gb S] (ubuntu 24.04 ltsc)~~
-      - ~~ping plugin (manual script has been written in case I need to bypass the web ui)~~
-    - ~~adguard home lxc [1C, 512mb R, 8gb S]~~
-    - ~~nut vm [1C, 512mb R, 4gb S]~~
-      - ~~web ui~~
-      - ~~falco~~
+    - netbox lxc [1C, 2gb R, 20gb S] (ubuntu 24.04 ltsc)
+      - ping plugin (manual script has been written in case I need to bypass the web ui)
+    - adguard home lxc [1C, 512mb R, 8gb S]
+    - nut vm [1C, 512mb R, 4gb S]
+      - web ui
+      - falco
       - node exporter
-    - ~~printer lxc [1C, 2GB R, 20GB S]~~
-      - ~~CUPS (network printing)~~
-      - ~~Avahi (mDNS/Bonjour broadcasting)~~
+    - printer lxc [1C, 2GB R, 20GB S]
+      - CUPS (network printing)
+      - Avahi (mDNS/Bonjour broadcasting)
     - A.D. lxc [1c, 1gb r, 5gb s]
     - authelia lxc [1c, 512mb r, 2gbs]
     - misp lxc [2c, 4r, 40gbs]
