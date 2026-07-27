@@ -1,82 +1,44 @@
-- gateway - (cisco 5512-x with opnsense flash) (.01 on all vlans)
-  - crowdsec
-  - geoip
-- nas  
-  - immich
-  - uptime kuma lxc
-  - tailscale lxc
-  - postgresql
-  - redis
-- vm machine
-  - proxmox w/  linux mint guest os for vm and debian 12 for lxc with falco for monitoring and node exporter
-    - wazuh lxc [2C, 8gb R, 50gb S]
-    - opnvas lxc [1C, 8gb R, 40gb S]
-    - pbs lxc (nas target)
-    - honey pot vm [1C, 1gb R, 15gb S]
-      - cowrie
-      - opencanary
-      - falco
-      - node exporter
-    - cmd vm [2C, 4gb R, 40gb S]
-      - ansible
-      - tmux
-      - gitea
-      - gitea runner
-      - falco
-      - terraform
-      - portainer
-      - prowler
-      - node exporter
-      - IT tools
-      - link warden
-      - searxng
-      - excalidraw
-    - hashicorp vault lxc [1C, 2gb R, 10gb S]
-    - vault warden lxc [1C, 1gb R, 10gb S]
-    - pangolin newt lxc [1C, 1gb R, 10gb S]
-      - nginx
-    - nextcloud lxc [1C, 2gb R, 20gb S]
-    - jellyfin lxc [1C, 2gb R, 20gb S]
-      - v-nic 2
-      - arr stack
-      - dozzle
-    - home auto lxc [1C, 4gb R, 32gb S]
-      - home assistant
-      - Zigbee2MQTT
-      - mosquitto
-      - ntfy
-      - apprise
-      - flame
-    - netbox lxc [1C, 2gb R, 20gb S] (ubuntu 24.04 ltsc)
-      - ping plugin (manual script has been written in case I need to bypass the web ui)
-    - adguard home lxc [1C, 512mb R, 8gb S]
-    - nut vm [1C, 512mb R, 4gb S]
-      - web ui
-      - falco
-      - node exporter
-    - printer lxc [1C, 2GB R, 20GB S]
-      - CUPS (network printing)
-      - Avahi (mDNS/Bonjour broadcasting)
-    - A.D. lxc [1c, 1gb r, 5gb s]
-    - authelia lxc [1c, 512mb r, 2gbs]
-    - misp lxc [2c, 4r, 40gbs]
-    - unifi controller lxc [1c, 1gb r, 10gb s]
-    - Suricata vm [2c, 4gb r, 40gb s]
-      - v-nic x2 (one for span/mirror, one for management)
-      - suricata ppa on ubuntu server iso
-      - node exporter
-      - falco
-    - monitoring vm [2c, 4gbr, 40gb s]
-      - graphana
-      - prometheus
-      - node exporter
-- ai machine  [4C, 16GB RAM, 50GB Storage]
-  - web-ui
-  - ollama
-  - falco
-
-# oracle cloud instances
-- pangolin 
-
-
 # **With the upcoming lack of time to give the lab the attention it deserves I will be revamping this plan. I will have forgotten where I left off so I will be starting from scratch.**
+## VM machine
+### VM (Falco and Node exporter)
+- Active directory (Ubuntu, 2C, 4R, 50S)
+- Home assistant (Home assistant OS, 2C, 4R, 32S)
+- Honeypot (Alpine, 1C, 1R, 15S)
+- Suricata (Alpine, 2C, 4R, 40S)
+### LXC
+- Dockhand (1C, 1R, 15S)
+- MATIJAZEZELJ/SIB (2C, 2R, 50S)
+- pangolin newt (1C, .5R, 4S)
+- Authelia (1C, .5R, 4S)
+- Unifi controller (2C, 1R, 8S)
+- Vault warden (1C, .5R, 4S)
+- Gitea (2C, 1R, 15S)
+- Ansible & Terraform (1C, .5R, 4S)
+- Prowler & IT tools (1C, 1R, 8S)
+- Searxng (1C, 1R, 8S)
+- Excalidraw (1C, 1R, 4S)
+- Zigbee2MQTT & Mosquitto (1C, .5R, 4S)
+- NTFY & Apprise (1C, .5R, 4S)
+- Flame (1C, .25R, 2S)
+- Grafana & Prometheus (2C, 1R, 15S)
+- Falco sidekick (1C, .5R, 4S)
+- Nextcloud (2C, 1.5R, 20S)
+- Pi-hole (1c, .5R, 4S)
+- Linkding (1C, .5R, 4S)
+- Rsync (1C, .5R, 2S)
+- PBS (2C, 4R, 50S)
+- PhpIPAM (1C, 1R, 8S)
+- Cups (1C, 2R, 20S)
+## NAS
+- ARR Stack
+- Pi-Gallery2 & Photo sync
+## HP Elitedesk 800 G3 (RTX A2000 equipped)
+- Ollama & opem web ui
+## Dell Optiplex 5040 (Ububtu A310)
+- Jellyfin
+- Tailscale
+## cisco 5512-x (opn-sense)
+- crowdsec
+- geoip
+## oracle cloud instances
+- pangolin 
