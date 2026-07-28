@@ -1,7 +1,7 @@
 # **With the upcoming lack of time to give the lab the attention it deserves I will be revamping this plan. I will have forgotten where I left off so I will be starting from scratch.**
 ## VM machine (Proxmox)
 ### VM (Falco and Node exporter)
-- Active directory (Ubuntu, 2C, 2R, 50S)
+- FleetDM (Ubuntu, 2C, 2R, 50S)
 - Home assistant (Home assistant OS, 2C, 2R, 32S)
 - Honeypot (Alpine, 1C, 1R, 15S)
 - Suricata (Alpine, 2C, 4R, 40S)
