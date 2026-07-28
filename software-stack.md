@@ -30,6 +30,7 @@
 - PhpIPAM (1C, 1R, 8S)
 - Cups (1C, .5R, 20S)
 - Traefik (1C, .5R, 4S)
+- Tailscale (1c, 1r, 5s)
 ## NAS (unraid with built in prometheus exporter)
 - ARR Stack
   - Radarr
@@ -49,7 +50,6 @@
 - node exporter
 ## Dell Optiplex 5040 (Ububtu A310)
 - Jellyfin (library on nas)
-- Tailscale
 - Node exporter
 - intel gpu top
 ## cisco 5512-x (opn-sense with build in telegraf exporter)
@@ -65,3 +65,6 @@
 |20|Storage|
 |30|Media|
 |40|Home automation|
+|50|guest|
+|60|iot|
+|70|OOB|
