@@ -1,13 +1,13 @@
 # **With the upcoming lack of time to give the lab the attention it deserves I will be revamping this plan. I will have forgotten where I left off so I will be starting from scratch.**
 ## VM machine
 ### VM (Falco and Node exporter)
-- Active directory (Ubuntu, 2C, 4R, 50S)
-- Home assistant (Home assistant OS, 2C, 4R, 32S)
+- Active directory (Ubuntu, 2C, 2R, 50S)
+- Home assistant (Home assistant OS, 2C, 2R, 32S)
 - Honeypot (Alpine, 1C, 1R, 15S)
 - Suricata (Alpine, 2C, 4R, 40S)
 ### LXC
 - Dockhand (1C, 1R, 15S)
-- MATIJAZEZELJ/SIB (2C, 2R, 50S)
+- MATIJAZEZELJ/SIB (4C, 6R, 80S)
 - pangolin newt (1C, .5R, 4S)
 - Authelia (1C, .5R, 4S)
 - Unifi controller (2C, 1R, 8S)
@@ -29,6 +29,7 @@
 - PBS (2C, 4R, 50S)
 - PhpIPAM (1C, 1R, 8S)
 - Cups (1C, 2R, 20S)
+- Traefik (1C, .5R, 4S)
 ## NAS
 - ARR Stack
 - Pi-Gallery2 & Photo sync
