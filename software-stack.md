@@ -30,7 +30,7 @@
 - PhpIPAM (1C, 1R, 8S)
 - Cups (1C, .5R, 20S)
 - Traefik (1C, .5R, 4S)
-## NAS (unraid)
+## NAS (unraid with built in prometheus exporter)
 - ARR Stack
   - Radarr
   - Bazarr
@@ -45,10 +45,14 @@
 - NZB client
 ## HP Elitedesk 800 G3 (RTX A2000 equipped)
 - Ollama & opem web ui
+- nvidia-smi-exporter
+- node exporter
 ## Dell Optiplex 5040 (Ububtu A310)
-- Jellyfin
+- Jellyfin (library on nas)
 - Tailscale
-## cisco 5512-x (opn-sense)
+- Node exporter
+- intel gpu top
+## cisco 5512-x (opn-sense with build in telegraf exporter)
 - crowdsec
 - geoip
 ## oracle cloud instances
