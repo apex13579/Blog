@@ -57,3 +57,11 @@
 - geoip
 ## oracle cloud instances
 - pangolin 
+
+# VLAN plan
+|VLAN|Description|
+|---|---|
+|10|Management|
+|20|Storage|
+|30|Media|
+|40|Home automation|
