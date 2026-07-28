@@ -21,7 +21,6 @@
 
 * [ ] CompTIA Training: Professor Messer (YouTube)
 * [ ] CompTIA Simulation/Prep: Boson ExSim-Max
-* [ ] CompTIA A+
 * [ ] CompTIA Network+
 * [ ] CompTIA Security+
 * [ ] Azure Training: John Savill's Masterclass / Microsoft Learn
