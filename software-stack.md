@@ -6,7 +6,6 @@
 - Honeypot (Alpine, 1C, 1R, 15S)
 - Suricata (Alpine, 2C, 4R, 40S)
 - Red team (parrot, 4C, 8R, 40S)
-- Security (8C, 16R, 50s (offloaded to a nas dataset))
 ### LXC
 - Dockhand (1C, .5R, 15S)
 - MATIJAZEZELJ/SIB (4C, 6R, 80S)
