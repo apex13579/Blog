@@ -4,4 +4,6 @@
      alert("Welcome to the Sweatt Lab technical blog. Feel free to reach out on Discord or Linkedin if you have any suggestions or want to work with me on anything");
   </script>
 </body>
-2. 
+2. use the meta element to focus on seo for the blog
+
+3.
