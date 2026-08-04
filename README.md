@@ -17,3 +17,6 @@ All posts are in the root directory. Check out the latest:
 Visit the GitHub Pages site at `https://[your-username].github.io/desktop-tutorial/` for an easy-to-navigate experience.
 
 Feel free to follow, star, or contribute feedback!
+
+
+- [update notes](update-notes.md)
