@@ -3,3 +3,4 @@
 - [Issue 3: From Chaos to Clean Architecture](issue-3.md) - May 2, 2026
 - [Issue 4: Building the Sovereign Stack: From Cable Hell to ZFS Pools](issue-4.md) - june 3, 2026
 - [Issue 5: Burning it down to build it right: lab rebuild, UPS wars, and the summer of CCNA](issue-5.md) - July 1, 2026
+- <!-- [Issue 6: Out of bandwidth] -->
