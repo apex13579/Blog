@@ -1,2 +1,1 @@
-- [Issue 5: Burning it down to build it right: lab rebuild, UPS wars, and the summer of CCNA](issue-5.md) - July 1, 2026
-- <!-- [Issue 6: Out of bandwidth](Issue-6.md) - August 5, 2026 -->
+[Issue 6: Out of bandwidth](Issue-6.md) - August 5, 2026 
