@@ -6,4 +6,4 @@
 </body>
 2. use the meta element to focus on seo for the blog
 
-3.
+3. create a section for the portfolio after I fix the code to make it appear how I want
