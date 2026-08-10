@@ -45,12 +45,6 @@
 * [ ] **PASS AZ-700**
 
 
-* [ ] **AZ-800 & AZ-801: Windows Server Hybrid Administrator Associate**
-* [ ] Training: Microsoft Learn — Free
-* [ ] Lab: Active Directory Forest to Azure Arc on Proxmox — Free
-* [ ] **PASS AZ-800 & AZ-801**
-
-
 * [ ] **HTB Certified Junior Cybersecurity Associate (CJCA)**
 * [ ] Training: HTB Academy — Junior Cybersecurity Associate Path — Paid
 * [ ] **PASS CJCA**
