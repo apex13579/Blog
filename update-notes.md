@@ -7,3 +7,9 @@
 2. use the meta element to focus on seo for the blog
 
 3. create a section for the portfolio after I fix the code to make it appear how I want
+
+4. find a specific song to embed into the blog page.
+
+5. imbed photo and video associated to blog
+
+6. 
