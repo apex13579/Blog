@@ -51,8 +51,8 @@
 * [ ] **PASS AZ-800 & AZ-801**
 
 
-* [ ] **HTB Certified Junior Cybersecurity Analyst (CJCA)**
-* [ ] Training: HTB Academy — Junior Cybersecurity Analyst Path — Paid
+* [ ] **HTB Certified Junior Cybersecurity Associate (CJCA)**
+* [ ] Training: HTB Academy — Junior Cybersecurity Associate Path — Paid
 * [ ] **PASS CJCA**
 
 
