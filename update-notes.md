@@ -12,4 +12,4 @@
 
 5. imbed photo and video associated to blog
 
-6. 
+6. Add portfolio tab
