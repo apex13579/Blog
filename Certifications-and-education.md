@@ -4,8 +4,7 @@
 
 * [ ] **A.S. I.T.**
 * [ ] **B.S. I.T.**
-* [ ] **B.S./M.S. Pathway**
-* [ ] **M.S. I.T.**
+* [ ] **MBA**
 
 ##  Completed Certifications
 
@@ -36,15 +35,27 @@
   * [ ] Free
     * [ ] Jeremy's I.T. labs
     * [ ] Cisco packet tracer
-* [ ] AWS Solutions architect
+* [ ] **Microsoft Certified: Azure Fundamentals (AZ-900)**
   * [ ] Paid
-    * [ ] Adrian Cantrill (cantrill.io - The absolute best for real-world, hands-on architecture)
-    * [ ] Tutorials Dojo / Jon Bonso (The most accurate practice exams)
-    * [ ] Stephane Maarek (Udemy - Highly focused on passing the exam)
-    * [ ] In my area there is a university that offers a course.
+    * [ ] Local University Partner Course (Bundled with voucher & lab environment)
+    * [ ] Boson ExSim-Max for AZ-900 (High-fidelity exam simulator with detailed explanations)
+    * [ ] Whizlabs (Practice tests & guided hands-on sandbox labs)
+    * [ ] Scott Duffy (Udemy - Azure Fundamentals Course)
   * [ ] Free
-    * [ ] AWS Skill Builder (Amazon's official free tier training)
-    * [ ] FreeCodeCamp AWS SAA Course (YouTube - Andrew Brown)
+    * [ ] Microsoft Learn Official AZ-900 Learning Path (Includes free interactive sandboxes)
+    * [ ] John Savill’s Azure Fundamentals Masterclass (YouTube - The absolute best visual breakdown)
+    * [ ] FreeCodeCamp AZ-900 Course (YouTube - Andrew Brown)
+* [ ] **Microsoft Certified: Azure Administrator Associate (AZ-104)**
+  * [ ] Paid
+    * [ ] Local University Partner Course (Includes voucher & lab environment)
+    * [ ] Boson ExSim-Max for AZ-104 (Industry gold-standard for scenario questions & deep technical feedback)
+    * [ ] Tutorials Dojo / Jon Bonso (Highly accurate practice exams with detailed explanations)
+    * [ ] MeasureUp (Official Microsoft Practice Test Partner)
+    * [ ] Alan Rodrigues / Scott Duffy (Udemy - Deep-dive configuration courses)
+  * [ ] Free
+    * [ ] Microsoft Learn Official AZ-104 Learning Paths & Interactive Sandboxes
+    * [ ] John Savill’s Azure Infrastructure Channel (YouTube - AZ-104 Master Series & 4-Hour Exam Cram)
+    * [ ] GitHub Official Microsoft AZ-104 Labs (MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator)
 * [ ] CKA
   * [ ] Paid
     * [ ] Mumshad Mannambeth / KodeKloud (Udemy - Essential practical course)
@@ -53,15 +64,6 @@
   * [ ] Free
     * [ ] Kubernetes Official Documentation (Learn to navigate this fast for the open-book exam)
     * [ ] Minikube / Kubeadm (Build a cluster locally in your home lab)
-* [ ] OSCP
-  * [ ] Paid 
-    * [ ] OffSec PEN-200 / Learn One (Mandatory: You must buy this to take the exam)
-    * [ ] Hack The Box VIP (Follow the CPTS path for incredible prep)
-    * [ ] TryHackMe Premium (Offensive Pentesting path)
-  * [ ] Free
-    * [ ] TJNull's OSCP Prep List (A famous master list of vulnerable machines to practice on)
-    * [ ] IppSec (YouTube - Walkthroughs of HackTheBox machines to learn methodology)
-    * [ ] VulnHub (Download vulnerable VMs to attack in your home lab)
 * [ ] CISSP
   * [ ] paid
     * [ ] Boson ExSim-Max (Great for technical concepts, though the real exam is more managerial)
