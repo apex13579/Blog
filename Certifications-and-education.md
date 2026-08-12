@@ -1,13 +1,13 @@
 # Professional Certifications, Academic Path & SaaS Strategy
 
-## 🏛️ Academic Degrees
+##  Academic Degrees
 
 * [ ] **A.S. I.T.**
 * [ ] **B.S. I.T.**
 * [ ] **B.S./M.S. Pathway**
 * [ ] **M.S. I.T.**
 
-## ✅ Completed Certifications
+##  Completed Certifications
 
 * [x] **FSU Customer Service**
 * [x] **Google IT Support Professional**
@@ -17,35 +17,53 @@
 
 ---
 
-## 🟢 Beginner (Foundational)
+## Upcoming Certificates and where I will learn (both paid and free)
 
-* [ ] **CCNA**
-* [ ] **AZ-900**
-* [ ] **freeCodeCamp: Responsive Web Design**
-* [ ] **freeCodeCamp: JavaScript Algorithms and Data Structures**
-
----
-
-## 🔵 Intermediate (Professional & SaaS Foundations)
-
-* [ ] **PASS AZ-104**
-* [ ] **CJCA**
-* [ ] **CWES**
-* [ ] **freeCodeCamp: Front End Development Libraries**
-* [ ] **freeCodeCamp: Back End Development and APIs**
-
----
-
-## 🟠 Advanced (Expert Infrastructure & Security)
-
-* [ ] **CCNP ENTERPRISE**
-* [ ] **CWEE**
-* [ ] **freeCodeCamp: Information Security**
-* [ ] **freeCodeCamp: Scientific Computing with Python (NetDevOps Focus)** 
-
----
-
-## 🔴 Expert (Specialized Architect & Offense)
-
-* [ ] **CCIE ENTERPRISE INFRASTRUCTURE**
-* [ ] **OSCP**
+* [ ] Comptia Security+
+  * [ ] Paid 
+    * [ ] Boson
+    * [ ] Try hack me
+    * [ ] Jason Dions Training and practice (udemy)
+  * [ ] Free
+    * [ ] Professor messer
+    * [ ] Exam compass
+* [ ] CCNA
+  * [ ] Paid
+    * [ ] Boson
+    * [ ] Neil anderson (udemy)
+  * [ ] Free
+    * [ ] Jeremy's I.T. labs
+    * [ ] Cisco packet tracer
+* [ ] AWS Solutions Admin
+  * [ ] Paid
+    * [ ] Adrian Cantrill (cantrill.io - The absolute best for real-world, hands-on architecture)
+    * [ ] Tutorials Dojo / Jon Bonso (The most accurate practice exams)
+    * [ ] Stephane Maarek (Udemy - Highly focused on passing the exam)
+  * [ ] Free
+    * [ ] AWS Skill Builder (Amazon's official free tier training)
+    * [ ] FreeCodeCamp AWS SAA Course (YouTube - Andrew Brown)
+* [ ] CKA
+  * [ ] Paid
+    * [ ] Mumshad Mannambeth / KodeKloud (Udemy - Essential practical course)
+    * [ ] Killer.sh (Exam simulator—2 free attempts included with exam voucher)
+  * [ ] Free
+    * [ ] Kubernetes Official Documentation (Learn to navigate this fast for the open-book exam)
+    * [ ] Minikube / Kubeadm (Build a cluster locally in your home lab)
+* [ ] OSCP
+  * [ ] Paid 
+    * [ ] OffSec PEN-200 / Learn One (Mandatory: You must buy this to take the exam)
+    * [ ] Hack The Box VIP (Follow the CPTS path for incredible prep)
+    * [ ] TryHackMe Premium (Offensive Pentesting path)
+  * [ ] Free
+    * [ ] TJNull's OSCP Prep List (A famous master list of vulnerable machines to practice on)
+    * [ ] IppSec (YouTube - Walkthroughs of HackTheBox machines to learn methodology)
+    * [ ] VulnHub (Download vulnerable VMs to attack in your home lab)
+* [ ] CISSP
+  * [ ] paid
+    * [ ] Boson ExSim-Max (Great for technical concepts, though the real exam is more managerial)
+    * [ ] Destination Certification (MindMap book and MasterClass)
+    * [ ] Official (ISC)² Study Guide (Sybex OSG - Dry, but contains everything you need)
+    * [ ] LearnZapp (The official practice app)
+  * [ ] Free
+    * [ ] Pete Zerger CISSP Exam Cram (YouTube - An incredibly dense, high-quality 8-hour review)
+    * [ ] Kelly Handerhan "Why you will pass the CISSP" (YouTube - Essential mindset video for the exam)
