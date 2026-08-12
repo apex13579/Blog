@@ -74,6 +74,12 @@
   * [ ] Free
     * [ ] Pete Zerger CISSP Exam Cram (YouTube - An incredibly dense, high-quality 8-hour review)
     * [ ] Kelly Handerhan "Why you will pass the CISSP" (YouTube - Essential mindset video for the exam)
+* [ ]ISACA CISM (Certified Information Security Manager)
+  * [ ] Paid
+    * [ ] ISACA Official Review Manual & QAE Database
+    * [ ] Pocket Prep CISM App
+  * [ ] Free
+    * [ ] Mike Chapple CISM LinkedIn Learning / YouTube CISM Cram 
        
         #  CISSP Experience & Domain Mapping
 
