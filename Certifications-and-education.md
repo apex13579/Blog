@@ -63,7 +63,7 @@
     * [ ] IppSec (YouTube - Walkthroughs of HackTheBox machines to learn methodology)
     * [ ] VulnHub (Download vulnerable VMs to attack in your home lab)
 * [ ] CISSP
-    - # 🛡️ CISSP Experience & Domain Mapping
+    - #  CISSP Experience & Domain Mapping
 
 This document provides a detailed mapping of my professional background to the **(ISC)² CISSP Common Body of Knowledge (CBK)** domains. 
 
@@ -71,7 +71,7 @@ Across 13.5 cumulative years of full-time operational experience, my roles satis
 
 ---
 
-## 📊 Executive Summary Table
+##  Executive Summary Table
 
 | Role / Professional Domain | Duration | Full-Time Status | Primary CISSP Domains Covered |
 | :--- | :--- | :--- | :--- |
@@ -82,7 +82,7 @@ Across 13.5 cumulative years of full-time operational experience, my roles satis
 
 ---
 
-## 📜 Detailed Domain & Experience Breakdown
+##  Detailed Domain & Experience Breakdown
 
 ### 1. Correctional Officer (Facility & Perimeter Security)
 * **Duration:** 4 Years (48 Months)
@@ -135,11 +135,13 @@ Across 13.5 cumulative years of full-time operational experience, my roles satis
 
 ---
 
-## 🛠️ (ISC)² Requirement Compliance Summary
+##  (ISC)² Requirement Compliance Summary
 
 * **(ISC)² Requirement:** 5 Years cumulative experience across $\ge 2$ CISSP domains (or 4 Years with a 1-year education/certification waiver).
 * **Documented Experience:** **13.5 Years total cumulative experience** across **6 domains**.
-* **Core 5-Year Application Pair:** 
+* **Core 5-Year Application Pair:**
+
+* 
   * 4 Years as Correctional Officer (Domains 5 & 7)
   * 1 Year as IT Procurement Specialist (Domains 1 & 2)
   * *Result: 100% compliance with (ISC)² endorsement criteria.*
