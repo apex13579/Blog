@@ -67,3 +67,13 @@
   * [ ] Free
     * [ ] Pete Zerger CISSP Exam Cram (YouTube - An incredibly dense, high-quality 8-hour review)
     * [ ] Kelly Handerhan "Why you will pass the CISSP" (YouTube - Essential mindset video for the exam)
+
+
+## Training material
+* [ ] ANKI flash cards: Leveraging Active Recall ($R = e^{-t/S}$) and Spaced Repetition (SM-2/FSRS) to optimize memory stability, eliminate passive studying, and build permanent technical retention.
+    - According to the research I have found the math works out to roughly 125 days for the Jeremy's I.T. lab deck when spending roughly 25 minutes studying (YMMV). 
+* [ ] Packet tracer lab: Virtualizing a network so that you can get practice with configuring networks and Cisco CLI practice.
+* [ ] 
+ 
+
+       
