@@ -85,7 +85,7 @@ Across 13.5 cumulative years of full-time operational experience, my roles satis
 | Role / Professional Domain | Duration | Full-Time Status | Primary CISSP Domains Covered |
 | :--- | :--- | :--- | :--- |
 | **Correctional Officer** | **4.0 Years** | Full-Time (42 hrs/wk avg) | **Domain 5:** Identity & Access Management (IAM)<br>**Domain 7:** Security Operations |
-| **I.T. Procurement Specialist** | **1.0 Year** | Full-Time | **Domain 1:** Security & Risk Management<br>**Domain 2:** Asset Security |
+| **I.T. Procurement Specialist** | **Current position** | Full-Time | **Domain 1:** Security & Risk Management<br>**Domain 2:** Asset Security |
 | **Electrical Infrastructure Specialist** | **8.0 Years** | Full-Time | **Domain 3:** Security Architecture & Engineering<br>**Domain 7:** Security Operations |
 | **Structured Cabling Technician** | **0.5 Years** | Full-Time | **Domain 4:** Communication & Network Security<br>**Domain 3:** Security Architecture & Engineering |
 
@@ -109,7 +109,7 @@ Across 13.5 cumulative years of full-time operational experience, my roles satis
 ---
 
 ### 2. I.T. Procurement Specialist
-* **Duration:** 1 Year (12 Months)
+* **Duration:** Current position
 * **Primary CISSP Domains:** Domain 1 & Domain 2
 
 #### **Domain 1: Security & Risk Management**
