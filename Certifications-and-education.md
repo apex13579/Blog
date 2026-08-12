@@ -24,6 +24,7 @@
     * [ ] Boson
     * [ ] Try hack me
     * [ ] Jason Dions Training and practice (udemy)
+    * [ ] In my area there is a university that offers a course.
   * [ ] Free
     * [ ] Professor messer
     * [ ] Exam compass
@@ -31,14 +32,16 @@
   * [ ] Paid
     * [ ] Boson
     * [ ] Neil anderson (udemy)
+    * [ ] In my area there is a university that offers a course.
   * [ ] Free
     * [ ] Jeremy's I.T. labs
     * [ ] Cisco packet tracer
-* [ ] AWS Solutions Admin
+* [ ] AWS Solutions architect
   * [ ] Paid
     * [ ] Adrian Cantrill (cantrill.io - The absolute best for real-world, hands-on architecture)
     * [ ] Tutorials Dojo / Jon Bonso (The most accurate practice exams)
     * [ ] Stephane Maarek (Udemy - Highly focused on passing the exam)
+    * [ ] In my area there is a university that offers a course.
   * [ ] Free
     * [ ] AWS Skill Builder (Amazon's official free tier training)
     * [ ] FreeCodeCamp AWS SAA Course (YouTube - Andrew Brown)
@@ -46,6 +49,7 @@
   * [ ] Paid
     * [ ] Mumshad Mannambeth / KodeKloud (Udemy - Essential practical course)
     * [ ] Killer.sh (Exam simulator—2 free attempts included with exam voucher)
+    * [ ] In my area there is a university that offers a course.
   * [ ] Free
     * [ ] Kubernetes Official Documentation (Learn to navigate this fast for the open-book exam)
     * [ ] Minikube / Kubeadm (Build a cluster locally in your home lab)
@@ -59,6 +63,86 @@
     * [ ] IppSec (YouTube - Walkthroughs of HackTheBox machines to learn methodology)
     * [ ] VulnHub (Download vulnerable VMs to attack in your home lab)
 * [ ] CISSP
+    - # 🛡️ CISSP Experience & Domain Mapping
+
+This document provides a detailed mapping of my professional background to the **(ISC)² CISSP Common Body of Knowledge (CBK)** domains. 
+
+Across 13.5 cumulative years of full-time operational experience, my roles satisfy requirements across **6 of the 8 CISSP Domains**:
+
+---
+
+## 📊 Executive Summary Table
+
+| Role / Professional Domain | Duration | Full-Time Status | Primary CISSP Domains Covered |
+| :--- | :--- | :--- | :--- |
+| **Correctional Officer** | **4.0 Years** | Full-Time (42 hrs/wk avg) | **Domain 5:** Identity & Access Management (IAM)<br>**Domain 7:** Security Operations |
+| **I.T. Procurement Specialist** | **1.0 Year** | Full-Time | **Domain 1:** Security & Risk Management<br>**Domain 2:** Asset Security |
+| **Electrical Infrastructure Specialist** | **8.0 Years** | Full-Time | **Domain 3:** Security Architecture & Engineering<br>**Domain 7:** Security Operations |
+| **Structured Cabling Technician** | **0.5 Years** | Full-Time | **Domain 4:** Communication & Network Security<br>**Domain 3:** Security Architecture & Engineering |
+
+---
+
+## 📜 Detailed Domain & Experience Breakdown
+
+### 1. Correctional Officer (Facility & Perimeter Security)
+* **Duration:** 4 Years (48 Months)
+* **Shift Structure:** Rotational Schedule (Alternating 24-hr and 60-hr weeks = **42 hrs/week average**)
+* **Primary CISSP Domains:** Domain 5 & Domain 7
+
+#### **Domain 5: Identity & Access Management (IAM)**
+* **Physical Access Control Systems (PACS):** Enforced physical access control policies, credential verification, badging systems, biometric access controls, and visitor tracking within high-security restricted sectors.
+* **Privilege & Key Management:** Administered physical key control systems, credential validation, and role-based access boundaries to restrict physical access to high-risk zones.
+
+#### **Domain 7: Security Operations**
+* **Perimeter Intrusion & Surveillance:** Operated and monitored real-time CCTV feeds, perimeter intrusion detection systems (PIDS), and alarm management systems.
+* **Incident Response & Physical Safety:** Executed immediate physical incident response protocols, contraband and unauthorized asset screening, perimeter patrols, and emergency facility safety procedures.
+
+---
+
+### 2. I.T. Procurement Specialist
+* **Duration:** 1 Year (12 Months)
+* **Primary CISSP Domains:** Domain 1 & Domain 2
+
+#### **Domain 1: Security & Risk Management**
+* **Supply Chain Risk Management (SCRM):** Performed vendor security evaluations and third-party risk assessments during hardware, software, and technology service acquisition cycles.
+* **Compliance & Governance:** Evaluated vendor adherence to organizational security policies, contractual Service Level Agreements (SLAs), and regulatory compliance standards.
+
+#### **Domain 2: Asset Security**
+* **Asset Lifecycle Management:** Managed the lifecycle intake of IT hardware and software assets, tracking asset inventory, classification, software licensing compliance, and secure chain of custody.
+
+---
+
+### 3. Electrical Infrastructure Specialist
+* **Duration:** 8 Years (96 Months)
+* **Primary CISSP Domains:** Domain 3 & Domain 7
+
+#### **Domain 3: Security Architecture & Engineering**
+* **Power Distribution & Resiliency:** Installed, maintained, and audited critical power distribution systems, clean power feeds, Uninterruptible Power Supply (UPS) arrays, and backup diesel generator infrastructures in critical equipment areas.
+* **Environmental Security Controls:** Implemented grounding, surge suppression, fire suppression interfaces, and Emergency Power Off (EPO) systems to protect critical infrastructure assets.
+
+#### **Domain 7: Security Operations**
+* **Business Continuity & Environmental Safety:** Ensured power fault tolerance and high availability, participating in load-testing procedures and disaster mitigation strategy for critical power systems.
+
+---
+
+### 4. Structured Cabling Technician
+* **Duration:** 0.5 Years (6 Months)
+* **Primary CISSP Domains:** Domain 4 & Domain 3
+
+#### **Domain 4: Communication & Network Security**
+* **Physical Network Layer (Layer 1):** Installed, terminated, and tested physical media (copper Cat6 / fiber optic cable) across patch panels, equipment racks, and telecommunications spaces to ensure Layer 1 signal integrity.
+* **Pathway Security & Isolation:** Enforced conduit protection, cable routing safety, physical media separation, and shielding to prevent physical signal degradation, electromagnetic interference (EMI), or unauthorized physical taps.
+
+---
+
+## 🛠️ (ISC)² Requirement Compliance Summary
+
+* **(ISC)² Requirement:** 5 Years cumulative experience across $\ge 2$ CISSP domains (or 4 Years with a 1-year education/certification waiver).
+* **Documented Experience:** **13.5 Years total cumulative experience** across **6 domains**.
+* **Core 5-Year Application Pair:** 
+  * 4 Years as Correctional Officer (Domains 5 & 7)
+  * 1 Year as IT Procurement Specialist (Domains 1 & 2)
+  * *Result: 100% compliance with (ISC)² endorsement criteria.*
   * [ ] paid
     * [ ] Boson ExSim-Max (Great for technical concepts, though the real exam is more managerial)
     * [ ] Destination Certification (MindMap book and MasterClass)
