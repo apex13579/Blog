@@ -79,7 +79,13 @@
     * [ ] ISACA Official Review Manual & QAE Database
     * [ ] Pocket Prep CISM App
   * [ ] Free
-    * [ ] Mike Chapple CISM LinkedIn Learning / YouTube CISM Cram 
+    * [ ] Mike Chapple CISM LinkedIn Learning / YouTube CISM Cram  
+* [ ] ISACA CRISC (Certified in Risk and Information Systems Control)
+  * [ ] Paid
+    * [ ] ISACA Official Review Manual & QAE Database
+    * [ ] Pocket Prep CRISC App
+  * [ ] Free
+    * [ ] ISACA Risk Framework Whitepapers & Cyber Risk Quantification (FAIR Model) Docs
        
         #  CISSP Experience & Domain Mapping
 
