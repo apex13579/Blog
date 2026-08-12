@@ -63,7 +63,16 @@
     * [ ] IppSec (YouTube - Walkthroughs of HackTheBox machines to learn methodology)
     * [ ] VulnHub (Download vulnerable VMs to attack in your home lab)
 * [ ] CISSP
-    - #  CISSP Experience & Domain Mapping
+  * [ ] paid
+    * [ ] Boson ExSim-Max (Great for technical concepts, though the real exam is more managerial)
+    * [ ] Destination Certification (MindMap book and MasterClass)
+    * [ ] Official (ISC)² Study Guide (Sybex OSG - Dry, but contains everything you need)
+    * [ ] LearnZapp (The official practice app)
+  * [ ] Free
+    * [ ] Pete Zerger CISSP Exam Cram (YouTube - An incredibly dense, high-quality 8-hour review)
+    * [ ] Kelly Handerhan "Why you will pass the CISSP" (YouTube - Essential mindset video for the exam)
+       
+        #  CISSP Experience & Domain Mapping
 
 This document provides a detailed mapping of my professional background to the **(ISC)² CISSP Common Body of Knowledge (CBK)** domains. 
 
@@ -139,20 +148,10 @@ Across 13.5 cumulative years of full-time operational experience, my roles satis
 
 * **(ISC)² Requirement:** 5 Years cumulative experience across $\ge 2$ CISSP domains (or 4 Years with a 1-year education/certification waiver).
 * **Documented Experience:** **13.5 Years total cumulative experience** across **6 domains**.
-* **Core 5-Year Application Pair:**
-
-* 
+* **Core 5-Year Application Pair:** 
   * 4 Years as Correctional Officer (Domains 5 & 7)
   * 1 Year as IT Procurement Specialist (Domains 1 & 2)
   * *Result: 100% compliance with (ISC)² endorsement criteria.*
-  * [ ] paid
-    * [ ] Boson ExSim-Max (Great for technical concepts, though the real exam is more managerial)
-    * [ ] Destination Certification (MindMap book and MasterClass)
-    * [ ] Official (ISC)² Study Guide (Sybex OSG - Dry, but contains everything you need)
-    * [ ] LearnZapp (The official practice app)
-  * [ ] Free
-    * [ ] Pete Zerger CISSP Exam Cram (YouTube - An incredibly dense, high-quality 8-hour review)
-    * [ ] Kelly Handerhan "Why you will pass the CISSP" (YouTube - Essential mindset video for the exam)
 
 
 ## Training material
