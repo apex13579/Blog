@@ -72,8 +72,11 @@
 ## Training material
 * [ ] ANKI flash cards: Leveraging Active Recall ($R = e^{-t/S}$) and Spaced Repetition (SM-2/FSRS) to optimize memory stability, eliminate passive studying, and build permanent technical retention.
     - According to the research I have found the math works out to roughly 125 days for the Jeremy's I.T. lab deck when spending roughly 25 minutes studying (YMMV). 
-* [ ] Packet tracer lab: Virtualizing a network so that you can get practice with configuring networks and Cisco CLI practice.
-* [ ] 
+* [ ] Packet Tracer & GNS3/EVE-NG Labs: Virtualizing and emulating network environments to build hands-on mastery with routing protocols, switching, VLANs, and Cisco CLI syntax.
+* [ ] Interactive Cyber Ranges & Penetration Testing Labs (TryHackMe, Hack The Box, VulnHub): Hands-on gamified environments to build attack methodology, enumeration skills, and privilege escalation techniques for Security+ and OSCP.
+* [ ] Local Home Lab & Containerization (Proxmox VE, Docker, Minikube / K3s): Self-hosted Linux environments to deploy microservices, simulate multi-node Kubernetes clusters for CKA, and practice real-world system administration.
+* [ ] Cloud Sandboxes & Infrastructure-as-Code (AWS Free Tier, LocalStack, Terraform): Building live cloud architectures, IAM policies, and VPC configurations to solidify AWS Solutions Architect concepts in production-like settings.
+* [ ] Exam Simulators & High-Fidelity Performance Testing (Boson ExSim, Tutorials Dojo, Killer.sh): Time-pressured mock exam platforms used late in study cycles to identify weak domains, condition test stamina, and refine technical decision-making.
  
 
        
