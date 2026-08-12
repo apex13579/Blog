@@ -68,6 +68,7 @@
     * [ ] Destination Certification (MindMap book and MasterClass)
     * [ ] Official (ISC)² Study Guide (Sybex OSG - Dry, but contains everything you need)
     * [ ] LearnZapp (The official practice app)
+    * [ ] In my area there is a university that offers a course.
   * [ ] Free
     * [ ] Pete Zerger CISSP Exam Cram (YouTube - An incredibly dense, high-quality 8-hour review)
     * [ ] Kelly Handerhan "Why you will pass the CISSP" (YouTube - Essential mindset video for the exam)
