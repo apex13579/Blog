@@ -25,6 +25,7 @@ Welcome to the Sweatt Labs Blog! This is a temporary setup until I fully develop
 ## Education Plan
 - [Track my progress](Certifications-and-education.md)
 - [Command list](command_list.md)
+- Portfolio = TBD
 
 ## Posts
 
