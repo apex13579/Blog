@@ -4,7 +4,7 @@ Welcome to my Learning Blog! This repository hosts my blog posts documenting my 
 
 ## About
 
-I'm Apex, a lifelong learner diving into IT. This blog shares tips, tricks, and experiences as I pursue certifications like Google Data Analytics, Project Management, Cyber Security, AZ-900, and PCEP.
+I'm Kyle, a lifelong learner diving into IT. This blog shares tips, tricks, and experiences.
 
 ## Posts
 
