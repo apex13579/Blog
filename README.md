@@ -1,6 +1,6 @@
-# Apex's Pseudo Blog
+# Apex's Learning Blog
 
-Welcome to my Pseudo Blog! This repository hosts my blog posts documenting my IT certification journey, streaming schedule, and community-building efforts.
+Welcome to my Learning Blog! This repository hosts my blog posts documenting my IT certification journey, streaming schedule, and community-building efforts.
 
 ## About
 
@@ -20,3 +20,5 @@ Feel free to follow, star, or contribute feedback!
 
 
 - [update notes](update-notes.md)
+
+- [portfolio](coming soon)
