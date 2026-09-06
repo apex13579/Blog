@@ -1,4 +1,4 @@
-# Apex's Learning Blog
+# Sweatt lab's Learning Blog
 
 Welcome to my Learning Blog! This repository hosts my blog posts documenting my IT certification journey, streaming schedule, and community-building efforts.
 
